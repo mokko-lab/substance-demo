@@ -4,9 +4,13 @@ import {NavLink, BrowserRouter as Router, Route} from 'react-router-dom';
 
 import Minus from 'react-icons/lib/fa/minus';
 import Square from 'react-icons/lib/fa/square-o';
+import Map from 'react-icons/lib/fa/map-o';
+import AreaChart from 'react-icons/lib/fa/area-chart';
 
 import Cards from './pages/Cards';
 import Buttons from './pages/Buttons';
+import Theme from './pages/Theme';
+import Charts from './pages/Charts';
 
 class App extends Component {
   render() {
@@ -18,21 +22,17 @@ class App extends Component {
             <h1>Menu</h1>
           </Padded>
 
+          <SideBarLink><NavLink to='/theme'><Map /><span className="hidden-sm">Theme</span></NavLink></SideBarLink>
           <SideBarLink><NavLink to='/cards'><Square /><span className="hidden-sm">Cards</span></NavLink></SideBarLink>
           <SideBarLink><NavLink to='/buttons'><Minus /><span className="hidden-sm">Buttons</span></NavLink></SideBarLink>
+          <SideBarLink><NavLink to='/charts'><AreaChart /><span className="hidden-sm">Charts</span></NavLink></SideBarLink>
 
         </SideBar>
-        <MainPanel>
-          <div style={{
-            background: '#F9F9F9',
-          }}>
-
+        <MainPanel style={{background: '#F9F9F9', padding: '10px'}}>
+            <Route path='/theme' component={Theme} />
             <Route path='/cards' component={Cards} />
-
             <Route path='/buttons' component={Buttons} />
-
-
-          </div>
+            <Route path='/charts' component={Charts} />
         </MainPanel>
         </div>
       </Router>

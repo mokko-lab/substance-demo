@@ -2,11 +2,9 @@ import React, {Component} from 'react';
 import {Grid, Row, Col} from 'react-flexbox-grid';
 import {Card} from 'substance-ui';
 
-class Cards extends Component {
-
-  render() {
+export default function(props) {
       return (
-        <Grid>
+        <Grid fluid>
           <h1>Cards</h1>
           <Row>
             <Col xs={12} sm={6} md={4}>
@@ -27,7 +25,4 @@ class Cards extends Component {
           </Row>
         </Grid>
       )
-  }
 }
-
-export default Cards;

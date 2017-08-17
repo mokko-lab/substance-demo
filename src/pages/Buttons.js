@@ -2,8 +2,7 @@ import React, {Component} from 'react';
 import {Grid, Row, Col} from 'react-flexbox-grid';
 import {Card, Button} from 'substance-ui';
 
-class Buttons extends Component {
-  render() {
+export default function(props) {
     return (
       <Grid>
         <h1>Buttons</h1>
@@ -75,6 +74,3 @@ class Buttons extends Component {
       </Grid>
     )
   }
-}
-
-export default Buttons;
