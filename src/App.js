@@ -2,11 +2,8 @@ import React, {Component} from 'react';
 import {SideBar, Padded, MainPanel, NavLink as SideBarLink} from 'substance-ui';
 import {NavLink, BrowserRouter as Router, Route} from 'react-router-dom';
 
-import {Grid, Row, Col} from 'react-flexbox-grid';
-
-import Cutlery from 'react-icons/lib/fa/cutlery';
-import User from 'react-icons/lib/fa/user';
-import Star from 'react-icons/lib/fa/star';
+import Minus from 'react-icons/lib/fa/minus';
+import Square from 'react-icons/lib/fa/square-o';
 
 import Cards from './pages/Cards';
 import Buttons from './pages/Buttons';
@@ -21,8 +18,8 @@ class App extends Component {
             <h1>Menu</h1>
           </Padded>
 
-          <SideBarLink><NavLink to='/cards'><User /><span className="hidden-sm">Cards</span></NavLink></SideBarLink>
-          <SideBarLink><NavLink to='/buttons'><Cutlery /><span className="hidden-sm">Buttons</span></NavLink></SideBarLink>
+          <SideBarLink><NavLink to='/cards'><Square /><span className="hidden-sm">Cards</span></NavLink></SideBarLink>
+          <SideBarLink><NavLink to='/buttons'><Minus /><span className="hidden-sm">Buttons</span></NavLink></SideBarLink>
 
         </SideBar>
         <MainPanel>
