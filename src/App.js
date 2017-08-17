@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button, Card, SideBar, Padded, MainPanel} from 'substance-ui';
+import {Button, Card, SideBar, Padded, MainPanel, NavLink} from 'substance-ui';
 import {Grid, Row, Col} from 'react-flexbox-grid';
 
 class App extends Component {
@@ -10,6 +10,9 @@ class App extends Component {
           <Padded>
             <h1>Menu</h1>
           </Padded>
+
+          <NavLink>Test</NavLink>
+
         </SideBar>
         <MainPanel>
           <div style={{
@@ -19,6 +22,8 @@ class App extends Component {
           }}>
             <Grid>
               <h1>Substance UI from Mokko</h1>
+
+
             </Grid>
 
             <Grid>
