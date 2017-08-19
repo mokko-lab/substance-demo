@@ -1,3 +1,4 @@
+/* This gets added anyway.. */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:700,900|Source+Sans+Pro:400,700');
 
 body {
@@ -6,11 +7,18 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-h1 {
+h1, h2, h3 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
+  letter-spacing: 1px;
+}
+
+h2, h3 {
+  font-weight: 700;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: #333;
+  margin-top: 2px;
+  margin-bottom: 8px;
 }

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import {Grid, Row, Col} from 'react-flexbox-grid';
+import {Grid, Row, Col} from 'react-styled-flexboxgrid';
 import {theme, Card} from 'substance-ui';
 import Dot from '../components/Dot';
 
@@ -10,7 +10,7 @@ export default function(props) {
       <h1>Test</h1>
       <Row>
       <Col md sm={12} xs={12}>
-        <Card>
+        <Card padded>
           <h2>Colors</h2>
 
           <Dot color={theme.colors.primary}>Primary</Dot>
@@ -22,7 +22,7 @@ export default function(props) {
         </Card>
       </Col>
       <Col md sm={12} xs={12}>
-        <Card></Card>
+        <Card padded></Card>
       </Col>
       </Row>
     </Grid>

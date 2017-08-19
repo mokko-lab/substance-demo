@@ -22,10 +22,10 @@ class App extends Component {
             <h1>Menu</h1>
           </Padded>
 
-          <SideBarLink><NavLink to='/theme'><Map /><span className="hidden-sm">Theme</span></NavLink></SideBarLink>
-          <SideBarLink><NavLink to='/cards'><Square /><span className="hidden-sm">Cards</span></NavLink></SideBarLink>
-          <SideBarLink><NavLink to='/buttons'><Minus /><span className="hidden-sm">Buttons</span></NavLink></SideBarLink>
-          <SideBarLink><NavLink to='/charts'><AreaChart /><span className="hidden-sm">Charts</span></NavLink></SideBarLink>
+          <SideBarLink><NavLink to='/theme'><Map />Theme</NavLink></SideBarLink>
+          <SideBarLink><NavLink to='/cards'><Square />Cards</NavLink></SideBarLink>
+          <SideBarLink><NavLink to='/buttons'><Minus />Buttons</NavLink></SideBarLink>
+          <SideBarLink><NavLink to='/charts'><AreaChart />Charts</NavLink></SideBarLink>
 
         </SideBar>
         <MainPanel style={{background: '#F9F9F9', padding: '10px'}}>
