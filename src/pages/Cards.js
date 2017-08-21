@@ -1,6 +1,8 @@
 import React from 'react';
 import {Grid, Row, Col} from 'react-styled-flexboxgrid';
-import {Card, Padded, Button} from 'substance-ui';
+import {Card, Padded, Button, IconButton} from 'substance-ui';
+import { FaTrash,  FaPlusCircle, FaCog } from 'react-icons/lib/fa';
+
 
 export default function(props) {
       return (
@@ -26,9 +28,13 @@ export default function(props) {
           <Row>
             <Col xs={12} sm={6} md={4}>
               <Card>
+              <IconButton><FaCog /></IconButton>
+              <IconButton><FaTrash /></IconButton>
+              <IconButton><FaPlusCircle /></IconButton>
                 <Padded>
                   <h4>Profile Card</h4>
                 </Padded>
+
                 <img alt="card image" src="https://tiffinity-parse.s3.amazonaws.com/parse/92ce2f2bc9bff40890c5540bb6ec730d_mobile.jpeg" style={{maxWidth: '100%'}}>
                 </img>
                 <Padded style={{textAlign: 'center'}}>
