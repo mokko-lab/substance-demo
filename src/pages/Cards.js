@@ -35,7 +35,7 @@ export default function(props) {
                   <h4>Profile Card</h4>
                 </Padded>
 
-                <img alt="card image" src="https://tiffinity-parse.s3.amazonaws.com/parse/92ce2f2bc9bff40890c5540bb6ec730d_mobile.jpeg" style={{maxWidth: '100%'}}>
+                <img alt="sample food" src="https://tiffinity-parse.s3.amazonaws.com/parse/92ce2f2bc9bff40890c5540bb6ec730d_mobile.jpeg" style={{maxWidth: '100%'}}>
                 </img>
                 <Padded style={{textAlign: 'center'}}>
                   <h3>Joe Gardner</h3>

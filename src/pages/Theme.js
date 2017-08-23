@@ -7,7 +7,7 @@ import Dot from '../components/Dot';
 export default function(props) {
   return (
     <Grid fluid>
-      <h1>Test</h1>
+      <h1>Theme</h1>
       <Row>
       <Col md sm={12} xs={12}>
         <Card padded>
@@ -20,9 +20,6 @@ export default function(props) {
           <Dot color={theme.colors.warning} size={76}>Warning</Dot>
           <Dot color={theme.colors.error} size={76}>Error</Dot>
         </Card>
-      </Col>
-      <Col md sm={12} xs={12}>
-        <Card padded></Card>
       </Col>
       </Row>
     </Grid>
