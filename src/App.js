@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {SideBar, Padded, MainPanel, NavLink as SideBarLink} from 'substance-ui';
+import {makeTheme, ThemeProvider, SideBar, Padded, MainPanel, NavLink as SideBarLink} from 'substance-ui';
 import {NavLink, BrowserRouter as Router, Route} from 'react-router-dom';
 
 import Minus from 'react-icons/lib/fa/minus';
@@ -18,10 +18,26 @@ import Tables from './pages/Tables';
 import Form from './pages/Form';
 
 
+const myTheme = makeTheme({
+
+
+  colors: {
+    primary: '#6DC6B6',
+    secondary: '#7C39DA'
+  },
+
+  animations: {
+    fast: '100ms',
+  }
+
+});
+
+
 class App extends Component {
   render() {
     return (
       <Router>
+        <ThemeProvider theme={myTheme}>
         <div>
           <SideBar>
             <Padded>
@@ -48,6 +64,7 @@ class App extends Component {
 
           </MainPanel>
         </div>
+        </ThemeProvider>
       </Router>
     );
   }
