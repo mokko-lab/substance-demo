@@ -15,6 +15,7 @@ import Theme from './pages/Theme';
 import Charts from './pages/Charts';
 import Lists from './pages/Lists';
 import Tables from './pages/Tables';
+import Form from './pages/Form';
 
 
 class App extends Component {
@@ -33,6 +34,7 @@ class App extends Component {
             <SideBarLink><NavLink to='/charts'><AreaChart />Charts</NavLink></SideBarLink>
             <SideBarLink><NavLink to='/lists'><IoNavicon />Lists</NavLink></SideBarLink>
             <SideBarLink><NavLink to='/tables'><IoIosListOutline />Tables</NavLink></SideBarLink>
+            <SideBarLink><NavLink to='/form'><IoIosListOutline />Forms</NavLink></SideBarLink>
 
           </SideBar>
           <MainPanel style={{background: '#F9F9F9', padding: '10px'}}>
@@ -42,6 +44,7 @@ class App extends Component {
               <Route path='/charts' component={Charts} />
               <Route path='/lists' component={Lists} />
               <Route path='/tables' component={Tables} />
+              <Route path='/form' component={Form} />
 
           </MainPanel>
         </div>
