@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import { Card, Padded, Panel, Row, Column, Button, IconButton } from 'substance-ui';
+import { Card, Padded, Button, Row, Column, Heading, Paragraph } from 'substance-ui';
 
-import { FaTrash,  FaPlusCircle, FaCog } from 'react-icons/lib/fa';
 
 
 
@@ -10,9 +9,9 @@ class Cards extends Component {
     return (
       <div style={{maxWidth: '1700px',margin: '0 auto'}}>
 
-        <Padded padding="60px 0px 40px 0px">
-          <h1>Cards</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea co</p>
+        <Padded padding="70px 0px 50px 0px">
+          <Heading type="h2" weight={800} margin={0}>Cards</Heading>
+          <Paragraph size="medium" weight={300} margin="10px 0 0 0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br /> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea co</Paragraph>
         </Padded>
 
         <Row gutter={30}>

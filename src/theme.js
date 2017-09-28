@@ -2,13 +2,18 @@
 const theme = {
 
   colors: {
-    primary: '#00A8F3',
-    secondary: '#FFCF00'
+    primary: '#1EB0E9',
+    secondary: '#FFBF00'
+  },
+
+  fonts: {
+    heading: "'Montserrat', sans-serif",
+    paragraph: "'Source Sans Pro', sans-serif"
   },
 
   sidebar: {
     width: 240,
-    bg: '#fff'
+    bg: '#ff'
   },
 
   animations: {

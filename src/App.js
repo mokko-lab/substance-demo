@@ -1,13 +1,6 @@
 import React, {Component} from 'react';
-import {makeTheme, ThemeProvider, SideBar, Padded, Panel, MainPanel, NavLink as SideBarLink} from 'substance-ui';
-import {NavLink, BrowserRouter as Router, Route, Redirect} from 'react-router-dom';
-
-import Minus from 'react-icons/lib/fa/minus';
-import Square from 'react-icons/lib/fa/square-o';
-import Map from 'react-icons/lib/fa/map-o';
-import AreaChart from 'react-icons/lib/fa/area-chart';
-
-import {IoIosListOutline, IoNavicon} from 'react-icons/lib/io';
+import { makeTheme, ThemeProvider, SideBar, Padded, Panel, MainPanel, NavLink as SideBarLink } from 'substance-ui';
+import { NavLink, BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Cards from './pages/Cards';
 import Buttons from './pages/Buttons';
@@ -33,16 +26,16 @@ class App extends Component {
             <SideBar shadow={true} activeBackground>
               <Panel justifyContent="center">
                 <Padded margin="40px 0px 30px 0px">
-                  <img src={require('./images/logo.svg')} width="140" />
+                  <img src={require('./images/logo.svg')} width="140" alt="" />
                 </Padded>
               </Panel>
-              <SideBarLink><NavLink exact to='/'><Map />Theme</NavLink></SideBarLink>
-              <SideBarLink><NavLink to='/cards'><Square />Cards</NavLink></SideBarLink>
-              <SideBarLink><NavLink to='/buttons'><Minus />Buttons</NavLink></SideBarLink>
-              <SideBarLink><NavLink to='/charts'><AreaChart />Charts</NavLink></SideBarLink>
-              <SideBarLink><NavLink to='/lists'><IoNavicon />Lists</NavLink></SideBarLink>
-              <SideBarLink><NavLink to='/tables'><IoIosListOutline />Tables</NavLink></SideBarLink>
-              <SideBarLink><NavLink to='/form'><IoIosListOutline />Forms</NavLink></SideBarLink>
+              <SideBarLink><NavLink exact to='/'>Theme</NavLink></SideBarLink>
+              <SideBarLink><NavLink to='/cards'>Cards</NavLink></SideBarLink>
+              <SideBarLink><NavLink to='/buttons'>Buttons</NavLink></SideBarLink>
+              <SideBarLink><NavLink to='/charts'>Charts</NavLink></SideBarLink>
+              <SideBarLink><NavLink to='/lists'>Lists</NavLink></SideBarLink>
+              <SideBarLink><NavLink to='/tables'>Tables</NavLink></SideBarLink>
+              <SideBarLink><NavLink to='/form'>Forms</NavLink></SideBarLink>
             </SideBar>
 
             <MainPanel backgroundColor="#F9F9F9">
