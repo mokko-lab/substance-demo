@@ -43,13 +43,14 @@ class Charts extends Component {
             ]
 
       return (
-      <div style={{maxWidth: '1700px',margin: '0 auto', padding: '0 30px'}}>
-        <Padded padding="70px 0px 50px 0px">
-          <Heading type="h2" weight={800} margin={0}>Cards</Heading>
-          <Paragraph size="medium" weight={300} margin="10px 0 0 0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br /> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea co</Paragraph>
-        </Padded>
+        <div style={{maxWidth: '1700px',margin: '0 auto', padding: '0 30px 50px 30px'}}>
 
-        <Row gutter={40}>
+          <Padded padding="70px 0px 50px 0px">
+            <Heading type="h2" weight={800} margin={0}>Charts</Heading>
+            <Paragraph size="medium" weight={300} margin="10px 0 0 0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br /> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea co</Paragraph>
+          </Padded>
+
+        <Row gutter={40} columnsCount={2}>
           <Column matchHeight>
             <Card>
               <Padded padding="30px 20px 20px 30px">
@@ -89,8 +90,6 @@ class Charts extends Component {
               </Padded>
             </Card>
           </Column>
-        </Row>
-        <Row gutter={40}>
           <Column matchHeight>
             <Card>
               <Padded padding="30px 20px 20px 30px">

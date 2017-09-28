@@ -17,7 +17,7 @@ const theme = {
   },
 
   animations: {
-    fast: '100ms',
+    fast: '500ms',
   }
 
 }

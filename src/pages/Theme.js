@@ -7,14 +7,14 @@ import Dot from '../components/Dot';
 class Theme extends Component {
   render() {
     return (
-      <div style={{maxWidth: '1700px',margin: '0 auto', padding: '0 30px'}}>
+      <div style={{maxWidth: '1700px',margin: '0 auto', padding: '0 30px 50px 30px'}}>
 
         <Padded padding="70px 0px 50px 0px">
-          <Heading type="h2" weight={800} margin={0}>Cards</Heading>
+          <Heading type="h2" weight={800} margin={0}>Theme</Heading>
           <Paragraph size="medium" weight={300} margin="10px 0 0 0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br /> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea co</Paragraph>
         </Padded>
 
-        <Row gutter={30}>
+        <Row gutter={40} columnsCount={2}>
           <Column matchHeight>
             <Card>
               <Padded padding="30px">
@@ -31,7 +31,7 @@ class Theme extends Component {
             </Card>
           </Column>
           <Column matchHeight>
-            <Card flex>
+            <Card>
               <Padded padding="30px">
                 <Padded padding="0 0 30px 0">
                   <Heading type="h5">Typography</Heading>

@@ -24,27 +24,27 @@ class App extends Component {
           <div>
 
             <SideBar shadow={true} activeBackground>
-              <Panel justifyContent="center">
+              <Panel alignment="center">
                 <Padded margin="40px 0px 30px 0px">
                   <img src={require('./images/logo.svg')} width="140" alt="" />
                 </Padded>
               </Panel>
               <SideBarLink><NavLink exact to='/'>Theme</NavLink></SideBarLink>
-              <SideBarLink><NavLink to='/cards'>Cards</NavLink></SideBarLink>
-              <SideBarLink><NavLink to='/buttons'>Buttons</NavLink></SideBarLink>
               <SideBarLink><NavLink to='/charts'>Charts</NavLink></SideBarLink>
+              <SideBarLink><NavLink to='/cards'>Cards</NavLink></SideBarLink>
               <SideBarLink><NavLink to='/lists'>Lists</NavLink></SideBarLink>
               <SideBarLink><NavLink to='/tables'>Tables</NavLink></SideBarLink>
+              <SideBarLink><NavLink to='/buttons'>Buttons</NavLink></SideBarLink>
               <SideBarLink><NavLink to='/form'>Forms</NavLink></SideBarLink>
             </SideBar>
 
             <MainPanel backgroundColor="#F9F9F9">
                 <Route exact path='/' component={Theme} />
                 <Route path='/cards' component={Cards} />
-                <Route path='/buttons' component={Buttons} />
                 <Route path='/charts' component={Charts} />
                 <Route path='/lists' component={Lists} />
                 <Route path='/tables' component={Tables} />
+                <Route path='/buttons' component={Buttons} />
                 <Route path='/form' component={Form} />
             </MainPanel>
 
