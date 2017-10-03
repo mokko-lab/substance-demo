@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Card, Padded, Row, Column, Heading, Paragraph, AreaChart, BarChart, StackChart, PieChart } from 'substance-ui';
 import theme from '../theme';
+import Container from '../components/container';
 
 
 class Charts extends Component {
@@ -43,7 +44,7 @@ class Charts extends Component {
             ]
 
       return (
-        <div style={{maxWidth: '1700px',margin: '0 auto', padding: '0 30px 50px 30px'}}>
+        <Container>
 
           <Padded padding="70px 0px 50px 0px">
             <Heading type="h2" weight={800} margin={0}>Charts</Heading>
@@ -126,7 +127,7 @@ class Charts extends Component {
             </Card>
           </Column>
         </Row>
-      </div>
+      </Container>
     );
   }
 }

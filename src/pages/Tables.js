@@ -1,7 +1,7 @@
-
 import React from 'react';
 import {Grid, Row, Col} from 'react-styled-flexboxgrid';
 import {Table, TableRow, TableCell, TableHead, TableBody, Card} from 'substance-ui';
+import Container from '../components/container';
 
 
 export default function(props) {

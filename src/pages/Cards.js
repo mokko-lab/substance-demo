@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import { Card, Padded, Button, Split, SplitColumn, Heading, Paragraph, Panel, CoverImage } from 'substance-ui';
-
+import Container from '../components/container';
 
 class Cards extends Component {
   render() {
     return (
-      <div style={{maxWidth: '1700px',margin: '0 auto', padding: '0 30px 50px 30px'}}>
+      <Container>
 
         <Padded padding="70px 0px 50px 0px">
           <Heading type="h2" weight={800} margin={0}>Cards</Heading>
@@ -78,7 +78,7 @@ class Cards extends Component {
             </Card>
           </SplitColumn>
         </Split>
-      </div>
+      </Container>
 
       );
     }
