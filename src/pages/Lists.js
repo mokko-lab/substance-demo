@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import ListDemo from '../components/ListDemo';
-import { Card, Padded, Row, Column, Heading, Paragraph, List, ListItem } from 'substance-ui';
+import { Card, Padded, Row, Column, Heading, Paragraph, List, ListItem, Split, SplitColumn, Loader } from 'substance-ui';
 import Container from '../components/container';
 import { IoChevronRight, IoPlus, IoMore, IoTrashB } from 'react-icons/lib/io'
 
@@ -10,7 +10,9 @@ class Lists extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: []
+      data: [],
+      data2: [],
+      data3: []
     }
   }
 
@@ -19,7 +21,7 @@ class Lists extends Component {
   }
 
   makeRemoteRequest = () => {
-   const url = `https://randomuser.me/api/?results=54`;
+   const url = `https://randomuser.me/api/?results=30`;
    fetch(url)
      .then(res => res.json())
      .then(res => {
@@ -63,8 +65,8 @@ class Lists extends Component {
           <Paragraph size="medium" weight={300} margin="10px 0 0 0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br /> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea co</Paragraph>
         </Padded>
 
-        <Row gutter={40} columnsCount={3}>
-          <Column matchHeight>
+        <Split gutter={40} ratio={[1,1,1]}>
+          <SplitColumn matchHeight>
             <Card>
                 <Padded padding="20px">
                   <Heading type="h5">Basic List</Heading>
@@ -72,11 +74,12 @@ class Lists extends Component {
                 <List
                   dataSource={this.state.data}
                   listComponent={this.listComponent}
+                  loadingComponent={<Loader />}
                   itemsPerPage={10}
                  />
             </Card>
-          </Column>
-          <Column matchHeight>
+          </SplitColumn>
+          <SplitColumn matchHeight>
             <Card>
                 <Padded padding="20px">
                   <Heading type="h5">List with Thumb</Heading>
@@ -84,11 +87,12 @@ class Lists extends Component {
                 <List
                   dataSource={this.state.data}
                   listComponent={this.listComponent2}
+                  loadingComponent={<Loader />}
                   itemsPerPage={7}
                  />
             </Card>
-          </Column>
-          <Column matchHeight>
+          </SplitColumn>
+          <SplitColumn matchHeight>
             <Card>
                 <Padded padding="20px">
                   <Heading type="h5">List with Summary</Heading>
@@ -96,13 +100,38 @@ class Lists extends Component {
                 <List
                   dataSource={this.state.data}
                   listComponent={this.listComponent3}
+                  loadingComponent={<Loader />}
                   itemsPerPage={7}
                  />
             </Card>
-          </Column>
-        </Row>
-
-
+          </SplitColumn>
+        </Split>
+        <Split gutter={40} ratio={[1,2]}>
+          <SplitColumn matchHeight>
+            <Card>
+              <Padded padding="20px">
+                <Heading type="h5">List with Icon</Heading>
+              </Padded>
+              <List
+                dataSource={this.state.data2}
+                listComponent={this.listComponent}
+                itemsPerPage={7}
+               />
+            </Card>
+          </SplitColumn>
+          <SplitColumn matchHeight>
+            <Card>
+              <Padded padding="20px">
+                <Heading type="h5">List Grid</Heading>
+              </Padded>
+              <List
+                dataSource={this.state.data3}
+                listComponent={this.listComponent}
+                itemsPerPage={7}
+               />
+            </Card>
+          </SplitColumn>
+        </Split>
       </Container>
 
       );
