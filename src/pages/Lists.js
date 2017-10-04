@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import ListDemo from '../components/ListDemo';
-import { Card, Padded, Row, Column, Heading, Paragraph, List, ListItem, Split, SplitColumn, Loader } from 'substance-ui';
+import { Card, Padded, Row, Column, Heading, Paragraph, List, ListItem, Split, SplitColumn, Loader, Grid } from 'substance-ui';
 import Container from '../components/container';
 import { IoChevronRight, IoPlus, IoMore, IoTrashB } from 'react-icons/lib/io'
 
@@ -18,6 +18,8 @@ class Lists extends Component {
 
   componentWillMount = () => {
      this.makeRemoteRequest();
+     this.makeRemoteRequest2();
+     this.makeRemoteRequest3();
   }
 
   makeRemoteRequest = () => {
@@ -31,24 +33,62 @@ class Lists extends Component {
      })
  };
 
+ makeRemoteRequest2 = () => {
+  const url = `https://api.iconfinder.com/v3/iconsets/filled-line-christmas-icons/icons?client_id=5AN80mUPOQJFcbXyKv9IjlPft4qv1y9SEQIdu7KIsJFlel2xx8e5eQCyLojmKT7E&client_secret=ZnM1Ad908MOhRloIfGJIcah35qQBFFwyekwXQEuhdrAS16rst8aFcgmtr50DowvO&query=emoji&count=30`;
+  fetch(url)
+    .then(res => res.json())
+    .then(res => {
+      this.setState({
+        data2: res.icons
+      });
+    })
+};
+
+makeRemoteRequest3 = () => {
+ const url = `https://api.iconfinder.com/v3/iconsets/food-set-3/icons?client_id=5AN80mUPOQJFcbXyKv9IjlPft4qv1y9SEQIdu7KIsJFlel2xx8e5eQCyLojmKT7E&client_secret=ZnM1Ad908MOhRloIfGJIcah35qQBFFwyekwXQEuhdrAS16rst8aFcgmtr50DowvO&query=emoji&count=30`;
+ fetch(url)
+   .then(res => res.json())
+   .then(res => {
+     this.setState({
+       data3: res.icons
+     });
+   })
+};
+
+
+
   listComponent = (item, index) => {
-    console.log('Iten' + item);
     return (
       <ListItem label={this.toTitleCase(item.name.first) + ' ' + this.toTitleCase(item.name.last)} />
     )
   }
 
   listComponent2 = (item, index) => {
-    console.log('Iten' + item);
     return (
-      <ListItem hover={true} label={this.toTitleCase(item.name.first) + ' ' + this.toTitleCase(item.name.last)} avatar={item.picture.medium} />
+      <ListItem hover={true} label={this.toTitleCase(item.name.first) + ' ' + this.toTitleCase(item.name.last)} avatar={item.picture.medium} rightIcon={<IoChevronRight />} />
     )
   }
 
   listComponent3 = (item, index) => {
-    console.log('Iten' + item);
     return (
       <ListItem label={this.toTitleCase(item.name.first) + ' ' + this.toTitleCase(item.name.last)} subText={item.email} avatar={item.picture.medium} />
+    )
+  }
+
+  listComponent4 = (item, index) => {
+    return (
+      <ListItem subText={item.styles[0].name} label={this.toTitleCase(item.tags[0]) + ' ' + this.toTitleCase(item.tags[1])} avatar={item.raster_sizes[8].formats[0].preview_url} />
+    )
+  }
+
+  listComponent5 = (item, index) => {
+    return (
+      <div key={index}>
+        <div style={{padding: '30px'}}>
+          <img src={item.raster_sizes[8].formats[0].preview_url} style={{width: '100%', height:'auto'}} alt="" />
+        </div>
+        <Paragraph size="small">{this.toTitleCase(item.tags[0]) + ' ' + this.toTitleCase(item.tags[1])}</Paragraph>
+      </div>
     )
   }
 
@@ -85,6 +125,7 @@ class Lists extends Component {
                   <Heading type="h5">List with Thumb</Heading>
                 </Padded>
                 <List
+                  enableHover={true}
                   dataSource={this.state.data}
                   listComponent={this.listComponent2}
                   loadingComponent={<Loader />}
@@ -110,11 +151,11 @@ class Lists extends Component {
           <SplitColumn matchHeight>
             <Card>
               <Padded padding="20px">
-                <Heading type="h5">List with Icon</Heading>
+                <Heading type="h5">List with Icon SVG</Heading>
               </Padded>
               <List
                 dataSource={this.state.data2}
-                listComponent={this.listComponent}
+                listComponent={this.listComponent4}
                 itemsPerPage={7}
                />
             </Card>
@@ -124,11 +165,15 @@ class Lists extends Component {
               <Padded padding="20px">
                 <Heading type="h5">List Grid</Heading>
               </Padded>
-              <List
-                dataSource={this.state.data3}
-                listComponent={this.listComponent}
-                itemsPerPage={7}
-               />
+              <Padded padding="0px 20px 30px 20px">
+                <Grid
+                  gutter={20}
+                  columnsCount={6}
+                  dataSource={this.state.data3}
+                  listComponent={this.listComponent5}
+                  itemsPerPage={18}
+                 />
+              </Padded>
             </Card>
           </SplitColumn>
         </Split>
