@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
-import { Card, Padded, Row, Column, Heading, Paragraph, AreaChart, BarChart, StackChart, PieChart } from 'substance-ui';
+import { Card, Padded, Row, Column } from 'substance-ui';
+import { Heading, Paragraph } from 'substance-ui/lib/components/Typography';
+import { AreaChart, BarChart, StackChart, PieChart } from 'substance-ui/lib/components/Charts';
+
 import theme from '../theme';
 import Container from '../components/container';
 

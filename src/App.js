@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
-import { makeTheme, ThemeProvider, SideBar, Padded, Panel, MainPanel, NavLink as SideBarLink } from 'substance-ui';
+import { makeTheme, ThemeProvider, Padded, Panel } from 'substance-ui';
+import { SideBar, MainPanel, SideBarLink } from 'substance-ui/lib/components/SideBar';
+
 import { NavLink, BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Cards from './pages/Cards';
@@ -22,7 +24,6 @@ class App extends Component {
       <Router>
         <ThemeProvider theme={myTheme}>
           <div>
-
             <SideBar shadow={true} activeBackground>
               <Panel alignment="center">
                 <Padded margin="40px 0px 30px 0px">

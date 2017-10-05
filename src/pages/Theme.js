@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
-import { withTheme, Card, Padded, Row, Column, Heading, Paragraph } from 'substance-ui';
+
+import { withTheme, Card, Row, Column, Padded } from 'substance-ui';
+import { Heading, Paragraph } from 'substance-ui/lib/components/Typography';
+
 import Container from '../components/container';
 
 
