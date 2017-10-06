@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import { Card, Padded, Row, Column } from 'substance-ui';
+import { Card, Padded, Row, Column, Panel } from 'substance-ui';
 import { Heading, Paragraph } from 'substance-ui/lib/components/Typography';
+import { TextInput } from 'substance-ui/lib/components/Forms';
 import { AreaChart, BarChart, StackChart, PieChart } from 'substance-ui/lib/components/Charts';
 
 import theme from '../theme';
@@ -23,10 +24,15 @@ class Form extends Component {
         <Row gutter={40} columnsCount={2}>
           <Column matchHeight>
             <Card>
-              <Padded padding="30px 20px 20px 30px">
+              <Padded padding="30px 30px 20px 30px">
                 <Padded padding="0 0 30px 0">
                   <Heading type="h5">Text Fields</Heading>
                 </Padded>
+                <Panel childSpacing={20}>
+                  <TextInput type="text" placeholder="Enter Your Text..." />
+                  <TextInput type="text" label="Input with Label" placeholder="Placeholder Text..." />
+
+                </Panel>
 
               </Padded>
             </Card>
@@ -34,7 +40,7 @@ class Form extends Component {
           <Column matchHeight>
             <Card>
               <Padded padding="30px 20px 20px 30px">
-                <Padded padding="0 0 30px 0">
+                <Padded padding="0 0 30px 0" childSpacing={20}>
                   <Heading type="h5">Dropdown & Radio</Heading>
                 </Padded>
 
