@@ -22,7 +22,6 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <ThemeProvider theme={myTheme}>
           <div>
             <SideBar shadow={true} activeBackground>
               <Panel alignment="center">
@@ -50,7 +49,6 @@ class App extends Component {
             </MainPanel>
 
           </div>
-        </ThemeProvider>
       </Router>
     );
   }
