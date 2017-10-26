@@ -8,7 +8,6 @@ import { ocean } from 'react-syntax-highlighter/dist/styles';
 import {Card, Row, Column, Padded, Panel, theme} from 'substance-ui';
 import {Heading, Paragraph} from 'substance-ui/lib/components/Typography';
 
-import Container from '../components/container';
 import Pallet from '../components/Pallet';
 
 
@@ -141,8 +140,8 @@ class Theme extends Component {
 
   render() {
     return (
-      <Container>
-        <Padded padding="70px 0px 50px 0px">
+      <div>
+        <Padded top={10} bottom={4}>
           <Heading type="h2" weight={800} margin={0}>Theme</Heading>
           <Paragraph size="medium" weight={300} margin="10px 0 0 0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             <br/>
@@ -152,9 +151,9 @@ class Theme extends Component {
         <Row gutter={40} columnsCount={2}>
           <Column matchHeight>
             <Card>
-              <Padded padding="30px">
-                <Padded padding="0 0 50px 0">
-                  <Heading type="h5">Theme</Heading>
+              <Padded all={3}>
+                <Padded bottom={4}>
+                  <Heading type="h5">Colors</Heading>
                 </Padded>
                 <Panel childSpacing={20}>
                   <Pallet height={80} label="Primary" color={theme.colors.primary}/>
@@ -181,8 +180,8 @@ class Theme extends Component {
                   {codeBlock2}
                 </SyntaxHighlighter>
               </CodeBlock>
-              <Padded padding="30px">
-                <Padded padding="0 0 30px 0">
+              <Padded all={3}>
+                <Padded bottom={4}>
                   <Heading type="h5">Typography</Heading>
                 </Padded>
                 <Panel childSpacing={14} padding="0 0 30px 0">
@@ -204,7 +203,7 @@ class Theme extends Component {
             </Card>
           </Column>
         </Row>
-      </Container>
+      </div>
     );
   }
 }

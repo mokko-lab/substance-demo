@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Paragraph } from 'substance-ui/lib/components/Typography';
-import { Panel, Split } from 'substance-ui';
+import { Panel } from 'substance-ui';
 
 const PalletBase = styled.div`
   background: ${props => props.color};

@@ -5,9 +5,8 @@ import Container from '../components/container';
 class Cards extends Component {
   render() {
     return (
-      <Container>
-
-        <Padded padding="70px 0px 50px 0px">
+      <div>
+        <Padded top={10} bottom={4}>
           <Heading type="h2" weight={800} margin={0}>Cards</Heading>
           <Paragraph size="medium" weight={300} margin="10px 0 0 0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br /> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea co</Paragraph>
         </Padded>
@@ -15,7 +14,7 @@ class Cards extends Component {
         <Split gutter={50} ratio={[1,2]}>
           <SplitColumn matchHeight>
             <Card>
-              <Padded padding="20px">
+              <Padded all={2}>
                 <Heading type="h5">Profile Card</Heading>
               </Padded>
               <img src={require('./../images/Profile-Card-Image.png')} style={{width: '100%'}} alt="" />
@@ -36,13 +35,13 @@ class Cards extends Component {
                 </SplitColumn>
                 <SplitColumn matchHeight>
                   <Panel flex flexDirection="column" justifyContent="space-between" alignment="left">
-                    <Padded padding="30px">
+                    <Padded all={2}>
                       <Heading type="h2">Pot <br/> Head </Heading>
                       <Paragraph size="medium" margin="20px 0 0 0">
                         The 12 steps to acquire mind-power is intended to build positive visuals, acquire mind power and help you achieve your dreams and desires that may be.
                       </Paragraph>
                     </Padded>
-                    <Padded padding="30px">
+                    <Padded all={3}>
                       <Paragraph size="xx-large" weight={300}>$450</Paragraph>
                       <Button color="secondary" style={{marginTop: 20}}>Buy Now</Button>
                     </Padded>
@@ -55,13 +54,13 @@ class Cards extends Component {
         <Split gutter={50} ratio={[1,1,1]}>
           <SplitColumn matchHeight>
             <Card>
-              <Padded padding="20px">
+              <Padded all={2}>
                 <Heading type="h5">News Card</Heading>
               </Padded>
-              <Padded padding="0px 16px">
+              <Padded all={0}>
                 <img src={require('./../images/News-Card-Image@2x.png')} style={{width: '100%'}} alt="" />
               </Padded>
-              <Padded padding="20px 30px 80px 30px">
+              <Padded all={2}>
                 <Heading type="h5">Wedding Rings A Gift For A Lifetime</Heading>
                 <Paragraph margin="5px 0 0 0" weight={300}>You know you’re destined to be a fashion designer if you: a) spent most of your childhood making clothes for</Paragraph>
               </Padded>
@@ -78,7 +77,7 @@ class Cards extends Component {
             </Card>
           </SplitColumn>
         </Split>
-      </Container>
+      </div>
 
       );
     }
