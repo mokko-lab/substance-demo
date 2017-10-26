@@ -21,7 +21,6 @@ const myTheme = makeTheme(theme);
 class App extends Component {
   render() {
     return (
-      <ThemeProvider theme={myTheme}>
         <Router>
             <div>
               <SideBar shadow={true} activeBackground>
@@ -51,7 +50,6 @@ class App extends Component {
 
             </div>
         </Router>
-      </ThemeProvider>
     );
   }
 }

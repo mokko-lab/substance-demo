@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
+
 import MdCode from 'react-icons/lib/md/code';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { ocean } from 'react-syntax-highlighter/dist/styles';
 
-import {Card, Row, Column, Padded, Panel} from 'substance-ui';
+import {Card, Row, Column, Padded, Panel, theme} from 'substance-ui';
 import {Heading, Paragraph} from 'substance-ui/lib/components/Typography';
-import theme from '../theme';
-import Container from '../components/container';
 
-import Dot from '../components/Dot';
+import Container from '../components/container';
+import Pallet from '../components/Pallet';
 
 
 const CodeBlock = styled.div`
@@ -156,12 +156,17 @@ class Theme extends Component {
                 <Padded padding="0 0 50px 0">
                   <Heading type="h5">Theme</Heading>
                 </Padded>
-                <Dot color={theme.colors.primary}>Primary</Dot>
-                <Dot color={theme.colors.secondary}>Secondary</Dot>
-                <br/>
-                <Dot color={theme.colors.success} size={76}>Success</Dot>
-                <Dot color={theme.colors.warning} size={76}>Warning</Dot>
-                <Dot color={theme.colors.error} size={76}>Error</Dot>
+                <Panel childSpacing={20}>
+                  <Pallet height={80} label="Primary" color={theme.colors.primary}/>
+                  <Pallet height={80} label="Secondary" color={theme.colors.secondary}/>
+                  <Pallet height={80} label="Monochrome" color={theme.colors.monochrome}/>
+                  <Pallet label="Heading" height={50} color={theme.colors.heading}/>
+                  <Pallet label="Paragraph" height={50} color={theme.colors.paragraph}/>
+                  <Pallet label="Success" height={40} color={theme.colors.success}/>
+                  <Pallet label="Warning" height={40} color={theme.colors.warning}/>
+                  <Pallet label="Error" height={40} color={theme.colors.error}/>
+                </Panel>
+
               </Padded>
             </Card>
           </Column>
