@@ -8,7 +8,7 @@ const theme = {
     heading: '#313131',
     paragraph: '#888888',
 
-    monochrome: '#000',
+    monochrome: '#545454',
     success: '#93E522',
     warning: '#FADB4A',
     error: '#FF3E00',

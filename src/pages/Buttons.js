@@ -23,7 +23,9 @@ class Buttons extends Component {
                     <Button color="primary">Regular Button</Button><br/>
                     <Button size="large" color="primary">Large Button</Button><br/>
                     <Button outline color="primary">Outline Button</Button><br/>
-                    <Button outline alt color="primary">Outline Alt Button</Button>
+                    <Button outline alt color="primary">Outline Alt Button</Button><br/>
+                    <Button color="primary" debounce={1}>Press Me</Button><br/>
+                    <Button outline color="primary" debounce={1}>Press Me</Button><br/>
                   </Padded>
                 </Padded>
               </Card>
