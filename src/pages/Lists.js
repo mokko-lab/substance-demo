@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
-import ListDemo from '../components/ListDemo';
-import { Card, Padded, Row, Column, Heading, Paragraph, List, ListItem, Split, SplitColumn, Loader, Grid } from 'substance-ui';
-import Container from '../components/container';
 import { IoChevronRight, IoPlus, IoMore, IoTrashB } from 'react-icons/lib/io'
 
+import { Padded, Row, Column, Panel, Split, SplitColumn } from 'substance-ui/lib/components/Layouts';
+import { Card } from 'substance-ui/lib/components/Cards';
+import { Heading, Paragraph } from 'substance-ui/lib/components/Typography';
+import { Grid, List, ListItem } from 'substance-ui/lib/components/Lists';
+import { Loader } from 'substance-ui/lib/components/Misc';
 
 class Lists extends Component {
 
@@ -98,9 +100,9 @@ makeRemoteRequest3 = () => {
 
   render() {
     return (
-      <Container>
+      <div>
 
-        <Padded padding="70px 0px 50px 0px">
+        <Padded top={10} bottom={4}>
           <Heading type="h2" weight={800} margin={0}>List</Heading>
           <Paragraph size="medium" weight={300} margin="10px 0 0 0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br /> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea co</Paragraph>
         </Padded>
@@ -108,7 +110,7 @@ makeRemoteRequest3 = () => {
         <Split gutter={40} ratio={[1,1,1]}>
           <SplitColumn matchHeight>
             <Card>
-                <Padded padding="20px">
+                <Padded all={2}>
                   <Heading type="h5">Basic List</Heading>
                 </Padded>
                 <List
@@ -121,7 +123,7 @@ makeRemoteRequest3 = () => {
           </SplitColumn>
           <SplitColumn matchHeight>
             <Card>
-                <Padded padding="20px">
+                <Padded all={2}>
                   <Heading type="h5">List with Thumb</Heading>
                 </Padded>
                 <List
@@ -135,7 +137,7 @@ makeRemoteRequest3 = () => {
           </SplitColumn>
           <SplitColumn matchHeight>
             <Card>
-                <Padded padding="20px">
+                <Padded all={2}>
                   <Heading type="h5">List with Summary</Heading>
                 </Padded>
                 <List
@@ -150,7 +152,7 @@ makeRemoteRequest3 = () => {
         <Split gutter={40} ratio={[1,2]}>
           <SplitColumn matchHeight>
             <Card>
-              <Padded padding="20px">
+              <Padded all={2}>
                 <Heading type="h5">List with Icon SVG</Heading>
               </Padded>
               <List
@@ -162,7 +164,7 @@ makeRemoteRequest3 = () => {
           </SplitColumn>
           <SplitColumn matchHeight>
             <Card>
-              <Padded padding="20px">
+              <Padded all={2}>
                 <Heading type="h5">List Grid</Heading>
               </Padded>
               <Padded padding="0px 20px 30px 20px">
@@ -177,7 +179,7 @@ makeRemoteRequest3 = () => {
             </Card>
           </SplitColumn>
         </Split>
-      </Container>
+      </div>
 
       );
     }

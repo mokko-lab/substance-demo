@@ -18,10 +18,10 @@ class Cards extends Component {
                 <Heading type="h5">Profile Card</Heading>
               </Padded>
               <img src={require('./../images/Profile-Card-Image.png')} style={{width: '100%'}} alt="" />
-              <Panel padding={20} alignment="center">
-                <Heading type="h3">Joe Gardner</Heading>
-                <Paragraph size="medium">Freelance Photographer</Paragraph>
-                <Button size="small" color="primary" style={{marginTop: 20}}>Follow Me</Button>
+              <Panel all={2} alignment="center">
+                  <Heading type="h3">Joe Gardner</Heading>
+                  <Paragraph size="medium">Freelance Photographer</Paragraph>
+                  <Button size="small" color="primary">Follow Me</Button>
               </Panel>
             </Card>
           </SplitColumn>

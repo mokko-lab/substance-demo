@@ -87,11 +87,11 @@ class Theme extends Component {
         <Row gutter={40} columnsCount={2}>
           <Column matchHeight>
             <Card>
-              <IconButton onClick={() => this.setState({ block2: true })}>
+              <IconButton onClick={() => this.setState({ block1: true })}>
                 <MdCode size={24}/>
               </IconButton>
               <CodeBlock visible={this.state.block1}>
-                <Close onClick={() => this.setState({ block2: false })}><span></span></Close>
+                <Close onClick={() => this.setState({ block1: false })}><span></span></Close>
                 <SyntaxHighlighter wrapLines={true} language='html, jsx, javascript' style={ocean}>
                   {codeBlock1}
                 </SyntaxHighlighter>

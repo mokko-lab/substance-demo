@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import { Card, Padded, Row, Column, Panel } from 'substance-ui';
-import { Heading, Paragraph } from 'substance-ui/lib/components/Typography';
-import { TextInput } from 'substance-ui/lib/components/Forms';
-import { AreaChart, BarChart, StackChart, PieChart } from 'substance-ui/lib/components/Charts';
+
 import { FaCalendarO, FaEnvelopeO } from 'react-icons/lib/fa';
 
-import theme from '../theme';
-import Container from '../components/container';
+import { Padded, Row, Column, Panel } from 'substance-ui/lib/components/Layouts';
+import { Card } from 'substance-ui/lib/components/Cards';
+import { Button } from 'substance-ui/lib/components/Buttons';
+import { Heading, Paragraph } from 'substance-ui/lib/components/Typography';
+import { TextInput } from 'substance-ui/lib/components/Forms';
 
 
 class Form extends Component {
@@ -30,8 +30,8 @@ class Form extends Component {
 
 
       return (
-        <Container>
-          <Padded padding="70px 0px 50px 0px">
+        <div>
+          <Padded top={10} bottom={4}>
             <Heading type="h2" weight={800} margin={0}>Form Elements</Heading>
             <Paragraph size="medium" weight={300} margin="10px 0 0 0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br /> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea co</Paragraph>
           </Padded>
@@ -39,8 +39,8 @@ class Form extends Component {
         <Row gutter={40} columnsCount={2}>
           <Column matchHeight>
             <Card>
-              <Padded padding="30px 30px 20px 30px">
-                <Padded padding="0 0 30px 0">
+              <Padded all={3}>
+                <Padded bottom={3}>
                   <Heading type="h5">Text Fields</Heading>
                 </Padded>
                 <Panel childSpacing={50}>
@@ -58,8 +58,8 @@ class Form extends Component {
           </Column>
           <Column matchHeight>
             <Card>
-              <Padded padding="30px 20px 20px 30px">
-                <Padded padding="0 0 30px 0" childSpacing={20}>
+              <Padded all={3}>
+                <Padded bottom={3}>
                   <Heading type="h5">Dropdown & Radio</Heading>
                 </Padded>
 
@@ -67,7 +67,7 @@ class Form extends Component {
             </Card>
           </Column>
         </Row>
-      </Container>
+      </div>
     );
   }
 }
