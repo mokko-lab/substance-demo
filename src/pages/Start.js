@@ -11,12 +11,6 @@ import {Heading, Paragraph, Code} from 'substance-ui/lib/components/Typography';
 
 class Start extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-    }
-  }
-
   render() {
     return (
       <div>

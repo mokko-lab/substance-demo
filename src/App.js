@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
 import { NavLink, BrowserRouter as Router, Route } from 'react-router-dom';
 
-import { makeTheme, ThemeProvider, Padded, Panel } from 'substance-ui';
-import { SideBar, LayoutWrapper, SideBarLink } from 'substance-ui/lib/components/Layouts';
-import Container from './components/container';
+import { makeTheme, ThemeProvider } from 'substance-ui';
+import { Padded, Panel, LayoutWrapper, SideBarLink } from 'substance-ui/lib/components/Layouts';
 
 import Start from './pages/Start';
+import Theme from './pages/Theme';
+import Typography from './pages/Typography';
 import Cards from './pages/Cards';
 import Buttons from './pages/Buttons';
-import Theme from './pages/Theme';
 import Charts from './pages/Charts';
 import Lists from './pages/Lists';
 import Tables from './pages/Tables';
@@ -30,6 +30,7 @@ const Sidebar = () => {
         </Panel>
         <SideBarLink><NavLink exact to='/'>Getting Started</NavLink></SideBarLink>
         <SideBarLink><NavLink exact to='/theme'>Theme</NavLink></SideBarLink>
+        <SideBarLink><NavLink exact to='/typography'>Typography</NavLink></SideBarLink>
         <SideBarLink><NavLink to='/charts'>Charts</NavLink></SideBarLink>
         <SideBarLink><NavLink to='/cards'>Cards</NavLink></SideBarLink>
         <SideBarLink><NavLink to='/lists'>Lists</NavLink></SideBarLink>
@@ -55,6 +56,7 @@ class App extends Component {
             >
               <Route exact path='/' component={Start} />
               <Route exact path='/theme' component={Theme} />
+              <Route exact path='/typography' component={Typography} />
               <Route path='/cards' component={Cards} />
               <Route path='/charts' component={Charts} />
               <Route path='/lists' component={Lists} />
