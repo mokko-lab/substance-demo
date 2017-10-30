@@ -84,7 +84,7 @@ class Theme extends Component {
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea co</Paragraph>
         </Padded>
 
-        <Row gutter={80}>
+        <Row gutter={40}>
           <Column>
             <Row gutter={40} columnsCount={2}>
               <Column matchHeight>
@@ -152,13 +152,17 @@ class Theme extends Component {
         <Row gutter={40}>
           <Column>
             <Card>
+              <Padded all={2}>
               <Padded bottom={2}>
                 <Heading type="h3">Main section</Heading>
               </Padded>
-              <Paragraph size="large">And thus in the midst of a city of wild conflict, filled with the alarms of war; with death and destruction reaping their terrible harvest around her, did Dejah Thoris, Princess of Helium, true daughter of Mars, the God of War, promise herself in marriage to John Carter, Gentleman of Virginia.
 
-                Sometime later Tars Tarkas and Kantos Kan returned to report that Zodanga had been completely reduced. Her forces were entirely destroyed or captured, and no further resistance was to be expected from within. Several battleships had escaped, but there were thousands of war and merchant vessels under guard of Thark warriors.At the foot of the throne these two parties separated and halted, facing each other at opposite sides of the aisle. Then came more dignitaries, and the officers of the palace and of the army, and finally two figures entirely muffled in scarlet silk, so that not a feature of either was discernible. These two stopped at the foot of the throne, facing Than Kosis. When the balance of the procession had entered and assumed their stations Than Kosis addressed the couple standing before him. I could not hear his words, but presently two officers advanced and removed the scarlet robe from one of the figures, and I saw that Kantos Kan had failed in his mission, for it was Sab Than, Prince of Zodanga, who stood revealed before me.</Paragraph>
-            </Card>
+                <Paragraph size="large">And thus in the midst of a city of wild conflict, filled with the alarms of war; with death and destruction reaping their terrible harvest around her, did Dejah Thoris, Princess of Helium, true daughter of Mars, the God of War, promise herself in marriage to John Carter, Gentleman of Virginia.
+
+                  Sometime later Tars Tarkas and Kantos Kan returned to report that Zodanga had been completely reduced. Her forces were entirely destroyed or captured, and no further resistance was to be expected from within. Several battleships had escaped, but there were thousands of war and merchant vessels under guard of Thark warriors.At the foot of the throne these two parties separated and halted, facing each other at opposite sides of the aisle. Then came more dignitaries, and the officers of the palace and of the army, and finally two figures entirely muffled in scarlet silk, so that not a feature of either was discernible. These two stopped at the foot of the throne, facing Than Kosis. When the balance of the procession had entered and assumed their stations Than Kosis addressed the couple standing before him. I could not hear his words, but presently two officers advanced and removed the scarlet robe from one of the figures, and I saw that Kantos Kan had failed in his mission, for it was Sab Than, Prince of Zodanga, who stood revealed before me.</Paragraph>
+                  </Padded>
+              </Card>
+
           </Column>
         </Row>
         <Panel top={5} bottom={5}>

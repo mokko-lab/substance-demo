@@ -5,7 +5,7 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 import {ocean} from 'react-syntax-highlighter/dist/styles';
 
 import { Padded, Row, Column, Panel } from 'substance-ui/lib/components/Layouts';
-import { Card } from 'substance-ui/lib/components/Cards';
+import { Card } from 'substance-ui/lib/components/Card';
 import { Heading, Paragraph } from 'substance-ui/lib/components/Typography';
 import { AreaChart, BarChart, StackChart, PieChart } from 'substance-ui/lib/components/Charts';
 

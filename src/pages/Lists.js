@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { IoChevronRight, IoPlus, IoMore, IoTrashB } from 'react-icons/lib/io'
 
 import { Padded, Row, Column, Panel, Split, SplitColumn } from 'substance-ui/lib/components/Layouts';
-import { Card } from 'substance-ui/lib/components/Cards';
+import { Card } from 'substance-ui/lib/components/Card';
 import { Heading, Paragraph } from 'substance-ui/lib/components/Typography';
 import { Grid, List, ListItem } from 'substance-ui/lib/components/Lists';
 import { Loader } from 'substance-ui/lib/components/Misc';

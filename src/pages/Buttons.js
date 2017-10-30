@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 import { Padded, Row, Column, Panel } from 'substance-ui/lib/components/Layouts';
-import { Card } from 'substance-ui/lib/components/Cards';
+import { Card } from 'substance-ui/lib/components/Card';
 import { Button } from 'substance-ui/lib/components/Buttons';
 import { Heading, Paragraph } from 'substance-ui/lib/components/Typography';
 import { Loader } from 'substance-ui/lib/components/Misc';

@@ -124,57 +124,85 @@ class Layout extends Component {
           <Padded all={2}>
             <Heading type="h5">Layout with Row - Columns</Heading>
           </Padded>
-          <Padded all={2}>
-            <Row gutter={20}>
-              <Column>
-                <LabelBox>Column 1</LabelBox>
-              </Column>
-            </Row>
-            <Row columnsCount={2} gutter={20}>
-              <Column>
-                <LabelBox>Columns:1/2</LabelBox>
-              </Column>
-              <Column>
-                <LabelBox>Columns:1/2</LabelBox>
-              </Column>
-            </Row>
-            <Row columnsCount={3} gutter={20}>
-              <Column>
-                <LabelBox>Columns:1/3</LabelBox>
-              </Column>
-              <Column>
-                <LabelBox>Columns:1/3</LabelBox>
-              </Column>
-              <Column>
-                <LabelBox>Columns:1/3</LabelBox>
-              </Column>
-            </Row>
-            <Row columnsCount={4} gutter={20}>
-              <Column>
-                <LabelBox>Columns:1/4</LabelBox>
-              </Column>
-              <Column>
-                <LabelBox>Columns:1/4</LabelBox>
-              </Column>
-              <Column>
-                <LabelBox>Columns:1/4</LabelBox>
-              </Column>
-              <Column>
-                <LabelBox>Columns:1/4</LabelBox>
-              </Column>
-              <Column>
-                <LabelBox>Columns:1/4</LabelBox>
-              </Column>
-              <Column>
-                <LabelBox>Columns:1/4</LabelBox>
-              </Column>
-              <Column>
-                <LabelBox>Columns:1/4</LabelBox>
-              </Column>
-              <Column>
-                <LabelBox>Columns:1/4</LabelBox>
-              </Column>
-            </Row>
+          <Padded left={2} right={2}>
+
+            <Padded bottom={2}>
+              <Row gutter={20}>
+                <Column>
+                  <LabelBox>Column 1</LabelBox>
+                </Column>
+              </Row>
+            </Padded>
+            <Padded bottom={2}>
+              <Row columnsCount={2} gutter={20}>
+                <Column>
+                  <LabelBox>Columns:1/2</LabelBox>
+                </Column>
+                <Column>
+                  <LabelBox>Columns:1/2</LabelBox>
+                </Column>
+              </Row>
+            </Padded>
+            <Padded bottom={2}>
+              <Row columnsCount={3} gutter={20}>
+                <Column>
+                  <LabelBox>Columns:1/3</LabelBox>
+                </Column>
+                <Column>
+                  <LabelBox>Columns:1/3</LabelBox>
+                </Column>
+                <Column>
+                  <LabelBox>Columns:1/3</LabelBox>
+                </Column>
+              </Row>
+            </Padded>
+            <Padded bottom={2}>
+              <Row columnsCount={4} gutter={20}>
+                <Column>
+                  <LabelBox>Columns:1/4</LabelBox>
+                </Column>
+                <Column>
+                  <LabelBox>Columns:1/4</LabelBox>
+                </Column>
+                <Column>
+                  <LabelBox>Columns:1/4</LabelBox>
+                </Column>
+                <Column>
+                  <LabelBox>Columns:1/4</LabelBox>
+                </Column>
+                <Column>
+                  <LabelBox>Columns:1/4</LabelBox>
+                </Column>
+                <Column>
+                  <LabelBox>Columns:1/4</LabelBox>
+                </Column>
+                <Column>
+                  <LabelBox>Columns:1/4</LabelBox>
+                </Column>
+                <Column>
+                  <LabelBox>Columns:1/4</LabelBox>
+                </Column>
+              </Row>
+            </Padded>
+            <Padded bottom={2}>
+              <Row columnsCount={5} gutter={20}>
+                <Column>
+                  <LabelBox>Columns:1/5</LabelBox>
+                </Column>
+                <Column>
+                  <LabelBox>Columns:1/5</LabelBox>
+                </Column>
+                <Column>
+                  <LabelBox>Columns:1/5</LabelBox>
+                </Column>
+                <Column>
+                  <LabelBox>Columns:1/5</LabelBox>
+                </Column>
+                <Column>
+                  <LabelBox>Columns:1/5</LabelBox>
+                </Column>
+              </Row>
+            </Padded>
           </Padded>
         </Card>
 

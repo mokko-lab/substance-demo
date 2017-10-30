@@ -11,7 +11,7 @@ import { Heading, Paragraph } from 'substance-ui/lib/components/Typography';
 import { Card } from 'substance-ui/lib/components/Card';
 
 import Pallet from '../components/Pallet';
-import { CodeBlock, IconButton, Close} from '../components/CodeBlock';
+import { CodeBlock, IconButton, Close } from '../components/CodeBlock';
 
 
 const codeBlock2 = `

@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import { FaCalendarO, FaEnvelopeO } from 'react-icons/lib/fa';
 
 import { Padded, Row, Column, Panel } from 'substance-ui/lib/components/Layouts';
-import { Card } from 'substance-ui/lib/components/Cards';
+import { Card } from 'substance-ui/lib/components/Card';
 import { Button } from 'substance-ui/lib/components/Buttons';
 import { Heading, Paragraph } from 'substance-ui/lib/components/Typography';
 import { TextInput } from 'substance-ui/lib/components/Forms';
