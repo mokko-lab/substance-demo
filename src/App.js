@@ -7,6 +7,7 @@ import { Padded, Panel, LayoutWrapper, SideBarLink } from 'substance-ui/lib/comp
 import Start from './pages/Start';
 import Theme from './pages/Theme';
 import Typography from './pages/Typography';
+import Layout from './pages/Layout';
 import Cards from './pages/Cards';
 import Buttons from './pages/Buttons';
 import Charts from './pages/Charts';
@@ -31,6 +32,7 @@ const Sidebar = () => {
         <SideBarLink><NavLink exact to='/'>Getting Started</NavLink></SideBarLink>
         <SideBarLink><NavLink exact to='/theme'>Theme</NavLink></SideBarLink>
         <SideBarLink><NavLink exact to='/typography'>Typography</NavLink></SideBarLink>
+        <SideBarLink><NavLink exact to='/layout'>Layout</NavLink></SideBarLink>
         <SideBarLink><NavLink to='/charts'>Charts</NavLink></SideBarLink>
         <SideBarLink><NavLink to='/cards'>Cards</NavLink></SideBarLink>
         <SideBarLink><NavLink to='/lists'>Lists</NavLink></SideBarLink>
@@ -57,6 +59,7 @@ class App extends Component {
               <Route exact path='/' component={Start} />
               <Route exact path='/theme' component={Theme} />
               <Route exact path='/typography' component={Typography} />
+              <Route exact path='/layout' component={Layout} />
               <Route path='/cards' component={Cards} />
               <Route path='/charts' component={Charts} />
               <Route path='/lists' component={Lists} />
