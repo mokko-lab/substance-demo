@@ -167,7 +167,7 @@ makeRemoteRequest3 = () => {
               <Padded all={2}>
                 <Heading type="h5">List Grid</Heading>
               </Padded>
-              <Padded padding="0px 20px 30px 20px">
+              <Padded left={3} right={3} bottom={3}>
                 <Grid
                   gutter={20}
                   columnsCount={6}
