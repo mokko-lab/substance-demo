@@ -79,9 +79,9 @@ class Theme extends Component {
       <div>
         <Padded top={10} bottom={4}>
           <Heading type="h2" weight={800} margin={0}>Typography</Heading>
-          <Paragraph size="medium" weight={300} margin="10px 0 0 0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          <Paragraph size="medium" weight={300} margin="10px 0 0 0">Typography is all about adjusting the text within the design while creating powerful content.
             <br/>
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea co</Paragraph>
+            It is an art of arranging all the content of your Website, giving a feel to it and presenting the information in a professional way.</Paragraph>
         </Padded>
 
         <Row gutter={40}>
@@ -131,12 +131,12 @@ class Theme extends Component {
                       <Heading type="h5">Paragraph</Heading>
                     </Padded>
                     <Panel childSpacing={14} padding="0 0 30px 0">
-                      <Paragraph size="x-small">Paragraph - x-small Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt laborum</Paragraph>
-                      <Paragraph size="small">Paragraph - small Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt laborum</Paragraph>
-                      <Paragraph>Paragraph - default Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt laborum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</Paragraph>
-                      <Paragraph size="medium">Paragraph - medium Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt laborum</Paragraph>
-                      <Paragraph size="large">Paragraph - default Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt laborum</Paragraph>
-                      <code>A piece of computer code</code>
+                      <Paragraph size="x-small"><strong>Paragraph - x-small</strong> A paragraph is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.</Paragraph>
+                      <Paragraph size="small"><strong>Paragraph - small</strong> A paragraph is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.</Paragraph>
+                      <Paragraph><strong>Paragraph - default</strong> A paragraph is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.</Paragraph>
+                      <Paragraph size="medium"><strong>Paragraph - medium</strong> A paragraph is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.</Paragraph>
+                      <Paragraph size="large"><strong>Paragraph - default</strong> A paragraph is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.</Paragraph>
+                      {/* <code>A piece of computer code</code> */}
                     </Panel>
 
                   </Padded>

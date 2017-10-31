@@ -80,9 +80,8 @@ class Layout extends Component {
       <div>
         <Padded top={10} bottom={4}>
           <Heading type="h2" weight={800} margin={0}>Layout</Heading>
-          <Paragraph size="medium" weight={300} margin="10px 0 0 0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            <br/>
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea co</Paragraph>
+          <Paragraph size="medium" weight={300} margin="10px 0 0 0">Layouts in Substance-UI makes the site user-friendly, functional and make it look attractive for customers to stay on the site.
+            </Paragraph>
         </Padded>
 
         <Row columnsCount={2} gutter={40}>
@@ -117,7 +116,7 @@ class Layout extends Component {
 
         <Padded top={4} bottom={4}>
           <Heading type="h3" weight={800} margin={0}>Grid</Heading>
-          <Paragraph size="medium" weight={300} margin="10px 0 0 0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </Paragraph>
+          <Paragraph size="medium" weight={300} margin="10px 0 0 0">Substance-UI responsive UI is based on a 12-column grid layout.</Paragraph>
         </Padded>
 
         <Card>

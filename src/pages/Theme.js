@@ -81,9 +81,8 @@ class Theme extends Component {
       <div>
         <Padded top={10} bottom={4}>
           <Heading type="h2" weight={800} margin={0}>Theme</Heading>
-          <Paragraph size="medium" weight={300} margin="10px 0 0 0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            <br/>
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea co</Paragraph>
+          <Paragraph size="medium" weight={300} margin="10px 0 0 0">Themes let you apply a reliable tone to your application. It enables you to modify all plan parts of your undertaking keeping in mind the end goal to meet the particular needs of your business or brand.
+          </Paragraph>
         </Padded>
 
         <Row gutter={40} columnsCount={2}>
