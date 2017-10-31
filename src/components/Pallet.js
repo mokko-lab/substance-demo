@@ -20,9 +20,9 @@ export default class Pallet extends React.Component {
         <PalletBase color={this.props.color} height={this.props.height}>
           {this.props.children}
         </PalletBase>
-        <Panel flex justifyContent="space-between">
+        <Panel paddingTop={5}>
           <Paragraph size="small"><strong>{this.props.label}</strong></Paragraph>
-          <Paragraph size="small">{this.props.color}</Paragraph>
+          <Paragraph size="x-small" style={{ 'opacity': 0.7 }}>{this.props.color}</Paragraph>
         </Panel>
       </div>
     )

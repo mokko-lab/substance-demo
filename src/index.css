@@ -20,3 +20,17 @@ h2, h3 {
 h1, h2, h3, h4, h5, h6 {
   color: #333;
 }
+
+
+pre {
+  border-radius: 3px;
+  padding: 3px;
+}
+
+p code {
+  background: #e8e8e8;
+  padding: 2px 3px;
+  border-radius: 3px;
+  color: black;
+  display: inline-block;
+}

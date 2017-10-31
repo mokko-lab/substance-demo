@@ -8,6 +8,7 @@ import Start from './pages/Start';
 import Theme from './pages/Theme';
 import Typography from './pages/Typography';
 import Layout from './pages/Layout';
+import Grid from './pages/Grid';
 import Cards from './pages/Cards';
 import Buttons from './pages/Buttons';
 import Charts from './pages/Charts';
@@ -28,11 +29,12 @@ const Sidebar = () => {
             <img src={require('./images/logo.svg')} width="140" alt="" />
         </Panel>
         <Panel paddingLeft={40}>
-          <Menu layout="vertical" itemColor="#313131" itemSpacing={30} activeFontSize={18} activeColor="black">
+          <Menu layout="vertical" itemColor="#313131" itemSpacing={30} activeFontSize={18} activeColor="black" activeWeight={800}>
             <MenuItem><NavLink exact to='/'>Getting Started</NavLink></MenuItem>
             <MenuItem><NavLink exact to='/theme'>Theme</NavLink></MenuItem>
             <MenuItem><NavLink exact to='/typography'>Typography</NavLink></MenuItem>
             <MenuItem><NavLink exact to='/layout'>Layout</NavLink></MenuItem>
+            <MenuItem><NavLink exact to='/grid'>Grid</NavLink></MenuItem>
             <MenuItem><NavLink to='/charts'>Charts</NavLink></MenuItem>
             <MenuItem><NavLink to='/cards'>Cards</NavLink></MenuItem>
             <MenuItem><NavLink to='/lists'>Lists</NavLink></MenuItem>
@@ -62,6 +64,7 @@ class App extends Component {
                 <Route exact path='/theme' component={Theme} />
                 <Route exact path='/typography' component={Typography} />
                 <Route exact path='/layout' component={Layout} />
+                <Route exact path='/grid' component={Grid} />
                 <Route path='/cards' component={Cards} />
                 <Route path='/charts' component={Charts} />
                 <Route path='/lists' component={Lists} />

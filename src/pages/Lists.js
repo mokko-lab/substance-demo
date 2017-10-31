@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import { IoChevronRight, IoPlus, IoMore, IoTrashB } from 'react-icons/lib/io'
+import { IoChevronRight } from 'react-icons/lib/io'
 
-import { Padded, Row, Column, Panel, Split, SplitColumn } from 'substance-ui/lib/components/Layouts';
+import { Panel, Split, SplitColumn } from 'substance-ui/lib/components/Layouts';
 import { Card } from 'substance-ui/lib/components/Card';
 import { Heading, Paragraph } from 'substance-ui/lib/components/Typography';
 import { Grid, List, ListItem } from 'substance-ui/lib/components/Lists';
@@ -102,17 +102,17 @@ makeRemoteRequest3 = () => {
     return (
       <div>
 
-        <Padded top={10} bottom={4}>
+        <Panel paddingTop={100} paddingBottom={40}>
           <Heading type="h2" weight={800} margin={0}>List</Heading>
           <Paragraph size="medium" weight={300} margin="10px 0 0 0">List are a flexible and powerful component for displaying a series of content. <br />Modify them the way you want to.</Paragraph>
-        </Padded>
+        </Panel>
 
         <Split gutter={40} ratio={[1,1,1]}>
           <SplitColumn matchHeight>
             <Card>
-                <Padded all={2}>
+                <Panel padding={20}>
                   <Heading type="h5">Basic List</Heading>
-                </Padded>
+                </Panel>
                 <List
                   dataSource={this.state.data}
                   listComponent={this.listComponent}
@@ -123,9 +123,9 @@ makeRemoteRequest3 = () => {
           </SplitColumn>
           <SplitColumn matchHeight>
             <Card>
-                <Padded all={2}>
+                <Panel padding={20}>
                   <Heading type="h5">List with Thumb</Heading>
-                </Padded>
+                </Panel>
                 <List
                   enableHover={true}
                   dataSource={this.state.data}
@@ -137,9 +137,9 @@ makeRemoteRequest3 = () => {
           </SplitColumn>
           <SplitColumn matchHeight>
             <Card>
-                <Padded all={2}>
+                <Panel padding={20}>
                   <Heading type="h5">List with Summary</Heading>
-                </Padded>
+                </Panel>
                 <List
                   dataSource={this.state.data}
                   listComponent={this.listComponent3}
@@ -152,9 +152,9 @@ makeRemoteRequest3 = () => {
         <Split gutter={40} ratio={[1,2]}>
           <SplitColumn matchHeight>
             <Card>
-              <Padded all={2}>
+              <Panel padding={20}>
                 <Heading type="h5">List with Icon SVG</Heading>
-              </Padded>
+              </Panel>
               <List
                 dataSource={this.state.data2}
                 listComponent={this.listComponent4}
@@ -164,10 +164,10 @@ makeRemoteRequest3 = () => {
           </SplitColumn>
           <SplitColumn matchHeight>
             <Card>
-              <Padded all={2}>
+              <Panel padding={20}>
                 <Heading type="h5">List Grid</Heading>
-              </Padded>
-              <Padded left={3} right={3} bottom={3}>
+              </Panel>
+              <Panel padding={30}>
                 <Grid
                   gutter={20}
                   columnsCount={6}
@@ -175,7 +175,7 @@ makeRemoteRequest3 = () => {
                   listComponent={this.listComponent5}
                   itemsPerPage={18}
                  />
-              </Padded>
+              </Panel>
             </Card>
           </SplitColumn>
         </Split>

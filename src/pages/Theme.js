@@ -4,12 +4,11 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 import { ocean } from 'react-syntax-highlighter/dist/styles';
 
 import { theme } from 'substance-ui';
-import { Row, Column, Panel } from 'substance-ui/lib/components/Layouts';
+import { Row, Column, Panel, Split, SplitColumn } from 'substance-ui/lib/components/Layouts';
 import { Heading, Paragraph } from 'substance-ui/lib/components/Typography';
 import { Card } from 'substance-ui/lib/components/Card';
 
 import Pallet from '../components/Pallet';
-import { CodeBlock } from '../components/CodeBlock';
 
 
 const codeBlock2 = `
@@ -38,18 +37,6 @@ const codeBlock2 = `
       bg: '#FFFFFF'
     },
     sidebar: {
-      bg: '#FFFFFF',
-      width: 300,
-      links: {
-        padding: '0px 40px',
-        fontSize: 15,
-        fontWeight: 300,
-        lineHeight: '50px',
-        color: '#888888',
-        activeFontSize: 22,
-        activeFontWeight: 800,
-        activeColor: '#313131'
-      },
     },
     animations: {
       fast: '250ms',
@@ -83,34 +70,71 @@ class Theme extends Component {
             <br/>
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea co</Paragraph>
         </Panel>
-        <Row gutter={40} columnsCount={2}>
-          <Column matchHeight>
-            <Card>
-              <Panel padding={30}>
-                <Panel paddingBottom={30}>
-                  <Heading type="h5">Colors</Heading>
-                </Panel>
-                <Panel childSpacing={20}>
-                  <Pallet height={80} label="Primary" color={theme.colors.primary}/>
-                  <Pallet height={80} label="Secondary" color={theme.colors.secondary}/>
-                  <Pallet height={80} label="Monochrome" color={theme.colors.monochrome}/>
-                  <Pallet label="Heading" height={50} color={theme.colors.heading}/>
-                  <Pallet label="Paragraph" height={50} color={theme.colors.paragraph}/>
-                  <Pallet label="Success" height={40} color={theme.colors.success}/>
-                  <Pallet label="Warning" height={40} color={theme.colors.warning}/>
-                  <Pallet label="Error" height={40} color={theme.colors.error}/>
-                </Panel>
-              </Panel>
-            </Card>
+        <Row gutter={40}>
+          <Column>
+            <Panel paddingBottom={20}>
+              <Heading type="h4" weight={800} margin={0}>Colors</Heading>
+            </Panel>
+            <Split gutter={20} ratio={[2,2,1,1,1,1,1]}>
+              <SplitColumn matchHeight>
+                <Card>
+                  <Panel padding={10}>
+                      <Pallet label="Primary" color={theme.colors.primary}/>
+                  </Panel>
+                </Card>
+              </SplitColumn>
+              <SplitColumn matchHeight>
+                <Card>
+                  <Panel padding={10}>
+                      <Pallet label="Secondary" color={theme.colors.secondary}/>
+                  </Panel>
+                </Card>
+              </SplitColumn>
+              <SplitColumn matchHeight>
+                <Card>
+                  <Panel padding={10}>
+                      <Pallet label="Heading" color={theme.colors.heading}/>
+                  </Panel>
+                </Card>
+              </SplitColumn>
+              <SplitColumn matchHeight>
+                <Card>
+                  <Panel padding={10}>
+                      <Pallet label="Paragraph" color={theme.colors.paragraph}/>
+                  </Panel>
+                </Card>
+              </SplitColumn>
+              <SplitColumn matchHeight>
+                <Card>
+                  <Panel padding={10}>
+                      <Pallet label="Success" color={theme.colors.success}/>
+                  </Panel>
+                </Card>
+              </SplitColumn>
+              <SplitColumn matchHeight>
+                <Card>
+                  <Panel padding={10}>
+                      <Pallet label="Warning" color={theme.colors.warning}/>
+                  </Panel>
+                </Card>
+              </SplitColumn>
+              <SplitColumn matchHeight>
+                <Card>
+                  <Panel padding={10}>
+                      <Pallet label="Error" color={theme.colors.error}/>
+                  </Panel>
+                </Card>
+              </SplitColumn>
+            </Split>
           </Column>
-          <Column matchHeight>
-            <Card>
-              <CodeBlock visible={true}>
-                <SyntaxHighlighter wrapLines={true} language='html, jsx, javascript' style={ocean}>
-                  {codeBlock2}
-                </SyntaxHighlighter>
-              </CodeBlock>
-            </Card>
+          <Column>
+            <Panel paddingBottom={20}>
+              <Heading type="h4" weight={800} margin={0}>Theme Provider</Heading>
+              <Paragraph><code> { ` <ThemeProvider> ` } </code> is a wrapper component, This component provides a theme to all React components underneath itself via the context API. In the render tree all Substance UI components will have access to the provided theme. </Paragraph>
+            </Panel>
+            <SyntaxHighlighter wrapLines={true} language='html, jsx, javascript' style={ocean}>
+              {codeBlock2}
+            </SyntaxHighlighter>
           </Column>
         </Row>
       </div>

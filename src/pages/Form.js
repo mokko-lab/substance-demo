@@ -2,9 +2,8 @@ import React, {Component} from 'react';
 
 import { FaCalendarO, FaEnvelopeO } from 'react-icons/lib/fa';
 
-import { Padded, Row, Column, Panel } from 'substance-ui/lib/components/Layouts';
+import { Row, Column, Panel } from 'substance-ui/lib/components/Layouts';
 import { Card } from 'substance-ui/lib/components/Card';
-import { Button } from 'substance-ui/lib/components/Buttons';
 import { Heading, Paragraph } from 'substance-ui/lib/components/Typography';
 import { TextInput } from 'substance-ui/lib/components/Forms';
 
@@ -31,18 +30,18 @@ class Form extends Component {
 
       return (
         <div>
-          <Padded top={10} bottom={4}>
+          <Panel paddingTop={100} paddingBottom={40}>
             <Heading type="h2" weight={800} margin={0}>Form Elements</Heading>
             <Paragraph size="medium" weight={300} margin="10px 0 0 0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br /> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea co</Paragraph>
-          </Padded>
+          </Panel>
 
         <Row gutter={40} columnsCount={2}>
           <Column matchHeight>
             <Card>
-              <Padded all={3}>
-                <Padded bottom={3}>
+              <Panel padding={30}>
+                <Panel paddingBottom={30}>
                   <Heading type="h5">Text Fields</Heading>
-                </Padded>
+                </Panel>
                 <Panel childSpacing={50}>
                   <TextInput type="text" placeholder="Enter Your Text..." />
                   <TextInput type="text" placeholder="Placeholder Text..." label="Input with Label"  />
@@ -53,17 +52,17 @@ class Form extends Component {
                   <TextInput type="text" label="Input Error" success={true} />
                 </Panel>
 
-              </Padded>
+              </Panel>
             </Card>
           </Column>
           <Column matchHeight>
             <Card>
-              <Padded all={3}>
-                <Padded bottom={3}>
+              <Panel padding={30}>
+                <Panel paddingBottom={30}>
                   <Heading type="h5">Dropdown & Radio</Heading>
-                </Padded>
+                </Panel>
 
-              </Padded>
+              </Panel>
             </Card>
           </Column>
         </Row>

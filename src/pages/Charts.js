@@ -1,16 +1,15 @@
 import React, {Component} from 'react';
-import styled from 'styled-components';
 import MdCode from 'react-icons/lib/md/code';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import {ocean} from 'react-syntax-highlighter/dist/styles';
 
-import { Padded, Row, Column, Panel } from 'substance-ui/lib/components/Layouts';
+import { Row, Column, Panel } from 'substance-ui/lib/components/Layouts';
 import { Card } from 'substance-ui/lib/components/Card';
 import { Heading, Paragraph } from 'substance-ui/lib/components/Typography';
 import { AreaChart, BarChart, StackChart, PieChart } from 'substance-ui/lib/components/Charts';
 
 import theme from '../theme';
-import {CodeBlock, IconButton, Close} from '../components/CodeBlock';
+import { CodeBlock, IconButton, Close } from '../components/CodeBlock';
 
 const codeBlock1 = `
 
@@ -154,12 +153,12 @@ class Charts extends Component {
     return (
       <div>
 
-        <Padded top={10} bottom={4}>
+        <Panel paddingTop={100} paddingBottom={40}>
           <Heading type="h2" weight={800} margin={0}>Charts</Heading>
-          <Paragraph size="medium" weight={300} margin="10px 0 0 0">Charts are important for your application, if you want to show any graphical representation of data. 
+          <Paragraph size="medium" weight={300} margin="10px 0 0 0">Charts are important for your application, if you want to show any graphical representation of data.
             <br/>
             Substance-UI got you covered on this by having Area, Bar, Stack and Pie Charts.</Paragraph>
-        </Padded>
+        </Panel>
 
         <Row gutter={40} columnsCount={2}>
           <Column matchHeight>
@@ -176,10 +175,10 @@ class Charts extends Component {
                   </SyntaxHighlighter>
                 </CodeBlock>
 
-                <Padded all={2}>
-                  <Padded bottom={4}>
+                <Panel padding={30}>
+                  <Panel paddingBottom={30}>
                     <Heading type="h5">Area Chart</Heading>
-                  </Padded>
+                  </Panel>
                   <AreaChart height={270} animation={{
                     duration: 2000,
                     onLoad: {
@@ -188,7 +187,7 @@ class Charts extends Component {
                   }} chartStyle={{
                     fill: theme.colors.primary
                   }} data={AreaChartData}/>
-                </Padded>
+                </Panel>
               </Card>
           </Column>
           <Column matchHeight>
@@ -204,10 +203,10 @@ class Charts extends Component {
                   {codeBlock2}
                 </SyntaxHighlighter>
               </CodeBlock>
-              <Padded all={2}>
-                <Padded bottom={4}>
+              <Panel padding={30}>
+                <Panel paddingBottom={30}>
                   <Heading type="h5">Bar Chart</Heading>
-                </Padded>
+                </Panel>
                 <BarChart height={270} animation={{
                   duration: 2000,
                   onLoad: {
@@ -217,7 +216,7 @@ class Charts extends Component {
                   fill: theme.colors.secondary,
                   width: 20
                 }} data={BarChartData}/>
-              </Padded>
+              </Panel>
             </Card>
           </Column>
           <Column matchHeight>
@@ -233,17 +232,17 @@ class Charts extends Component {
                   {codeBlock3}
                 </SyntaxHighlighter>
               </CodeBlock>
-              <Padded all={2}>
-                <Padded bottom={4}>
+              <Panel padding={30}>
+                <Panel paddingBottom={30}>
                   <Heading type="h5">Stack Chart</Heading>
-                </Padded>
+                </Panel>
                 <StackChart animation={{
                   duration: 2000,
                   onLoad: {
                     duration: 1000
                   }
                 }} curves={true} dataColors={['#DD105E', '#46466E']} data={[StackChartData1, StackChartData2]}/>
-              </Padded>
+              </Panel>
             </Card>
           </Column>
           <Column matchHeight>
@@ -259,17 +258,17 @@ class Charts extends Component {
                   {codeBlock4}
                 </SyntaxHighlighter>
               </CodeBlock>
-              <Padded all={2}>
-                <Padded bottom={4}>
+              <Panel padding={30}>
+                <Panel paddingBottom={30}>
                   <Heading type="h5">Pie Chart</Heading>
-                </Padded>
+                </Panel>
                 <PieChart innerRadius={60} height={250} animation={{
                   duration: 2000,
                   onLoad: {
                     duration: 1000
                   }
                 }} dataColors={['#303A52', '#574B90', '#9E579D', '#FC85AE']} data={PieData}/>
-              </Padded>
+              </Panel>
             </Card>
           </Column>
         </Row>
