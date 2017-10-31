@@ -156,9 +156,9 @@ class Charts extends Component {
 
         <Padded top={10} bottom={4}>
           <Heading type="h2" weight={800} margin={0}>Charts</Heading>
-          <Paragraph size="medium" weight={300} margin="10px 0 0 0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          <Paragraph size="medium" weight={300} margin="10px 0 0 0">Charts are important for your application, if you want to show any graphical representation of data. 
             <br/>
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea co</Paragraph>
+            Substance-UI got you covered on this by having Area, Bar, Stack and Pie Charts.</Paragraph>
         </Padded>
 
         <Row gutter={40} columnsCount={2}>

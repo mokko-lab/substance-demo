@@ -73,9 +73,7 @@ class Layout extends Component {
       <div>
         <Panel paddingTop={100} paddingBottom={40}>
           <Heading type="h2" weight={800} margin={0}>Layout</Heading>
-          <Paragraph size="medium" weight={300} margin="10px 0 0 0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            <br/>
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea co</Paragraph>
+          <Paragraph size="medium" weight={300} margin="10px 0 0 0">Layouts in Substance-UI makes the site user-friendly, functional and make it look attractive for customers to stay on the site.</Paragraph>
         </Panel>
 
         <Row gutter={40}>

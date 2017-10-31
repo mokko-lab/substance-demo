@@ -8,7 +8,7 @@ class Cards extends Component {
       <div>
         <Padded top={10} bottom={4}>
           <Heading type="h2" weight={800} margin={0}>Cards</Heading>
-          <Paragraph size="medium" weight={300} margin="10px 0 0 0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br /> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea co</Paragraph>
+          <Paragraph size="medium" weight={300} margin="10px 0 0 0">Cards are a flexible and extensible content container.<br /> It includes a wide variety of content, contextual background colors, and powerful display options</Paragraph>
         </Padded>
 
         <Split gutter={50} ratio={[1,2]}>

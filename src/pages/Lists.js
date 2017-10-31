@@ -104,7 +104,7 @@ makeRemoteRequest3 = () => {
 
         <Padded top={10} bottom={4}>
           <Heading type="h2" weight={800} margin={0}>List</Heading>
-          <Paragraph size="medium" weight={300} margin="10px 0 0 0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br /> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea co</Paragraph>
+          <Paragraph size="medium" weight={300} margin="10px 0 0 0">List are a flexible and powerful component for displaying a series of content. <br />Modify them the way you want to.</Paragraph>
         </Padded>
 
         <Split gutter={40} ratio={[1,1,1]}>
