@@ -1,17 +1,12 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 
-import MdCode from 'react-icons/lib/md/code';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { ocean } from 'react-syntax-highlighter/dist/styles';
 
-import { Row, Column, Padded, Panel, Split, SplitColumn } from 'substance-ui/lib/components/Layouts';
+import { Row, Column, Panel, Padded} from 'substance-ui/lib/components/Layouts';
 import { Heading, Paragraph } from 'substance-ui/lib/components/Typography';
 import { Card } from 'substance-ui/lib/components/Card';
-
-import Pallet from '../components/Pallet';
-import { CodeBlock, IconButton, Close} from '../components/CodeBlock';
-
 
 const SidebarDemo = styled.div`
   background: #efefef;
@@ -30,7 +25,7 @@ const SidebarDemo = styled.div`
     line-height: 300px;
     background: #d2d2d2;
     text-align: center;
-    width:20%;
+    width:160px;
   }
 `
 
@@ -65,8 +60,6 @@ const LabelBox = styled.div`
 `
 
 
-
-
 class Layout extends Component {
 
   constructor(props) {
@@ -78,134 +71,144 @@ class Layout extends Component {
   render() {
     return (
       <div>
-        <Padded top={10} bottom={4}>
+        <Panel paddingTop={100} paddingBottom={40}>
           <Heading type="h2" weight={800} margin={0}>Layout</Heading>
           <Paragraph size="medium" weight={300} margin="10px 0 0 0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             <br/>
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea co</Paragraph>
-        </Padded>
+        </Panel>
 
-        <Row columnsCount={2} gutter={40}>
-          <Column matchHeight>
-            <Card>
-              <Padded all={2}>
-                <Heading type="h5">Layout with Sidebar Card</Heading>
-              </Padded>
-              <Padded left={2} right={2} bottom={2}>
-                <SidebarDemo>
-                  <span>Sidebar</span>
-                  <div>Content</div>
-                </SidebarDemo>
-              </Padded>
-            </Card>
+        <Row gutter={40}>
+          <Column>
+            <Row columnsCount={2} gutter={40}>
+              <Column matchHeight>
+                <Card>
+                  <Panel padding={30}>
+                    <Panel paddingBottom={30}>
+                      <Heading type="h5">Layout with Sidebar Card</Heading>
+                    </Panel>
+                    <SidebarDemo>
+                      <span>Sidebar</span>
+                      <div>Content</div>
+                    </SidebarDemo>
+                  </Panel>
+                </Card>
+              </Column>
+
+              <Column matchHeight>
+                <Card>
+                  <Panel padding={30}>
+                    <Panel paddingBottom={30}>
+                      <Heading type="h5">Layout with Header</Heading>
+                    </Panel>
+                    <HeaderDemo>
+                      <span>Header</span>
+                      <div>Content</div>
+                    </HeaderDemo>
+                  </Panel>
+                </Card>
+              </Column>
+            </Row>
           </Column>
-
-          <Column matchHeight>
+          <Column>
+            <Heading type="h4" weight={800} margin={0}>Usage</Heading>
+            <span style={{'display': 'inline-block', 'overflow':'hidden', 'borderRadius':'4px'}}>
+              <SyntaxHighlighter useInlineStyles={true} language='html' style={ocean}>
+                {` <LayoutWrapper> YOUR APP CODE </LayoutWrapper> `}
+              </SyntaxHighlighter>
+            </span>
+          </Column>
+          <Column>
+            <Panel paddingBottom={20}>
+              <Heading type="h3" weight={800} margin={0}>Grid</Heading>
+              <Paragraph size="medium" weight={300}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </Paragraph>
+            </Panel>
             <Card>
-              <Padded all={2}>
-                <Heading type="h5">Layout with Header</Heading>
-              </Padded>
-              <Padded left={2} right={2} bottom={2}>
-                <HeaderDemo>
-                  <span>Header</span>
-                  <div>Content</div>
-                </HeaderDemo>
-              </Padded>
+              <Panel padding={30}>
+                <Panel paddingBottom={30}>
+                  <Heading type="h5" margin={0}>Layout with Row - Columns</Heading>
+                </Panel>
+                <Panel paddingBottom={20}>
+                  <Row gutter={20}>
+                    <Column>
+                      <LabelBox>Column 1</LabelBox>
+                    </Column>
+                  </Row>
+                </Panel>
+                <Panel paddingBottom={20}>
+                  <Row columnsCount={2} gutter={20}>
+                    <Column>
+                      <LabelBox>Columns:1/2</LabelBox>
+                    </Column>
+                    <Column>
+                      <LabelBox>Columns:1/2</LabelBox>
+                    </Column>
+                  </Row>
+                </Panel>
+                <Panel paddingBottom={20}>
+                  <Row columnsCount={3} gutter={20}>
+                    <Column>
+                      <LabelBox>Columns:1/3</LabelBox>
+                    </Column>
+                    <Column>
+                      <LabelBox>Columns:1/3</LabelBox>
+                    </Column>
+                    <Column>
+                      <LabelBox>Columns:1/3</LabelBox>
+                    </Column>
+                  </Row>
+                </Panel>
+                <Panel paddingBottom={20}>
+                  <Row columnsCount={4} gutter={20}>
+                    <Column>
+                      <LabelBox>Columns:1/4</LabelBox>
+                    </Column>
+                    <Column>
+                      <LabelBox>Columns:1/4</LabelBox>
+                    </Column>
+                    <Column>
+                      <LabelBox>Columns:1/4</LabelBox>
+                    </Column>
+                    <Column>
+                      <LabelBox>Columns:1/4</LabelBox>
+                    </Column>
+                    <Column>
+                      <LabelBox>Columns:1/4</LabelBox>
+                    </Column>
+                    <Column>
+                      <LabelBox>Columns:1/4</LabelBox>
+                    </Column>
+                    <Column>
+                      <LabelBox>Columns:1/4</LabelBox>
+                    </Column>
+                    <Column>
+                      <LabelBox>Columns:1/4</LabelBox>
+                    </Column>
+                  </Row>
+                </Panel>
+                <Panel paddingBottom={20}>
+                  <Row columnsCount={5} gutter={20}>
+                    <Column>
+                      <LabelBox>Columns:1/5</LabelBox>
+                    </Column>
+                    <Column>
+                      <LabelBox>Columns:1/5</LabelBox>
+                    </Column>
+                    <Column>
+                      <LabelBox>Columns:1/5</LabelBox>
+                    </Column>
+                    <Column>
+                      <LabelBox>Columns:1/5</LabelBox>
+                    </Column>
+                    <Column>
+                      <LabelBox>Columns:1/5</LabelBox>
+                    </Column>
+                  </Row>
+                </Panel>
+              </Panel>
             </Card>
           </Column>
         </Row>
-
-        <Padded top={4} bottom={4}>
-          <Heading type="h3" weight={800} margin={0}>Grid</Heading>
-          <Paragraph size="medium" weight={300} margin="10px 0 0 0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </Paragraph>
-        </Padded>
-
-        <Card>
-          <Padded all={2}>
-            <Heading type="h5">Layout with Row - Columns</Heading>
-          </Padded>
-          <Padded left={2} right={2}>
-
-            <Padded bottom={2}>
-              <Row gutter={20}>
-                <Column>
-                  <LabelBox>Column 1</LabelBox>
-                </Column>
-              </Row>
-            </Padded>
-            <Padded bottom={2}>
-              <Row columnsCount={2} gutter={20}>
-                <Column>
-                  <LabelBox>Columns:1/2</LabelBox>
-                </Column>
-                <Column>
-                  <LabelBox>Columns:1/2</LabelBox>
-                </Column>
-              </Row>
-            </Padded>
-            <Padded bottom={2}>
-              <Row columnsCount={3} gutter={20}>
-                <Column>
-                  <LabelBox>Columns:1/3</LabelBox>
-                </Column>
-                <Column>
-                  <LabelBox>Columns:1/3</LabelBox>
-                </Column>
-                <Column>
-                  <LabelBox>Columns:1/3</LabelBox>
-                </Column>
-              </Row>
-            </Padded>
-            <Padded bottom={2}>
-              <Row columnsCount={4} gutter={20}>
-                <Column>
-                  <LabelBox>Columns:1/4</LabelBox>
-                </Column>
-                <Column>
-                  <LabelBox>Columns:1/4</LabelBox>
-                </Column>
-                <Column>
-                  <LabelBox>Columns:1/4</LabelBox>
-                </Column>
-                <Column>
-                  <LabelBox>Columns:1/4</LabelBox>
-                </Column>
-                <Column>
-                  <LabelBox>Columns:1/4</LabelBox>
-                </Column>
-                <Column>
-                  <LabelBox>Columns:1/4</LabelBox>
-                </Column>
-                <Column>
-                  <LabelBox>Columns:1/4</LabelBox>
-                </Column>
-                <Column>
-                  <LabelBox>Columns:1/4</LabelBox>
-                </Column>
-              </Row>
-            </Padded>
-            <Padded bottom={2}>
-              <Row columnsCount={5} gutter={20}>
-                <Column>
-                  <LabelBox>Columns:1/5</LabelBox>
-                </Column>
-                <Column>
-                  <LabelBox>Columns:1/5</LabelBox>
-                </Column>
-                <Column>
-                  <LabelBox>Columns:1/5</LabelBox>
-                </Column>
-                <Column>
-                  <LabelBox>Columns:1/5</LabelBox>
-                </Column>
-                <Column>
-                  <LabelBox>Columns:1/5</LabelBox>
-                </Column>
-              </Row>
-            </Padded>
-          </Padded>
-        </Card>
-
       </div>
     );
   }

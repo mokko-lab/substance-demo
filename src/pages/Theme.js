@@ -1,17 +1,15 @@
 import React, {Component} from 'react';
-import styled from 'styled-components';
 
-import MdCode from 'react-icons/lib/md/code';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { ocean } from 'react-syntax-highlighter/dist/styles';
 
 import { theme } from 'substance-ui';
-import { Row, Column, Padded, Panel } from 'substance-ui/lib/components/Layouts';
+import { Row, Column, Panel } from 'substance-ui/lib/components/Layouts';
 import { Heading, Paragraph } from 'substance-ui/lib/components/Typography';
 import { Card } from 'substance-ui/lib/components/Card';
 
 import Pallet from '../components/Pallet';
-import { CodeBlock, IconButton, Close } from '../components/CodeBlock';
+import { CodeBlock } from '../components/CodeBlock';
 
 
 const codeBlock2 = `
@@ -79,20 +77,19 @@ class Theme extends Component {
   render() {
     return (
       <div>
-        <Padded top={10} bottom={4}>
+        <Panel paddingTop={100} paddingBottom={40}>
           <Heading type="h2" weight={800} margin={0}>Theme</Heading>
           <Paragraph size="medium" weight={300} margin="10px 0 0 0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             <br/>
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea co</Paragraph>
-        </Padded>
-
+        </Panel>
         <Row gutter={40} columnsCount={2}>
           <Column matchHeight>
             <Card>
-              <Padded all={3}>
-                <Padded bottom={4}>
+              <Panel padding={30}>
+                <Panel paddingBottom={30}>
                   <Heading type="h5">Colors</Heading>
-                </Padded>
+                </Panel>
                 <Panel childSpacing={20}>
                   <Pallet height={80} label="Primary" color={theme.colors.primary}/>
                   <Pallet height={80} label="Secondary" color={theme.colors.secondary}/>
@@ -103,8 +100,7 @@ class Theme extends Component {
                   <Pallet label="Warning" height={40} color={theme.colors.warning}/>
                   <Pallet label="Error" height={40} color={theme.colors.error}/>
                 </Panel>
-
-              </Padded>
+              </Panel>
             </Card>
           </Column>
           <Column matchHeight>

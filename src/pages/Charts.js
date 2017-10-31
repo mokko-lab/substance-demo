@@ -176,7 +176,7 @@ class Charts extends Component {
                   </SyntaxHighlighter>
                 </CodeBlock>
 
-                <Padded all={3}>
+                <Padded all={2}>
                   <Padded bottom={4}>
                     <Heading type="h5">Area Chart</Heading>
                   </Padded>
@@ -204,7 +204,7 @@ class Charts extends Component {
                   {codeBlock2}
                 </SyntaxHighlighter>
               </CodeBlock>
-              <Padded all={3}>
+              <Padded all={2}>
                 <Padded bottom={4}>
                   <Heading type="h5">Bar Chart</Heading>
                 </Padded>
@@ -233,7 +233,7 @@ class Charts extends Component {
                   {codeBlock3}
                 </SyntaxHighlighter>
               </CodeBlock>
-              <Padded all={3}>
+              <Padded all={2}>
                 <Padded bottom={4}>
                   <Heading type="h5">Stack Chart</Heading>
                 </Padded>
@@ -259,7 +259,7 @@ class Charts extends Component {
                   {codeBlock4}
                 </SyntaxHighlighter>
               </CodeBlock>
-              <Padded all={3}>
+              <Padded all={2}>
                 <Padded bottom={4}>
                   <Heading type="h5">Pie Chart</Heading>
                 </Padded>
