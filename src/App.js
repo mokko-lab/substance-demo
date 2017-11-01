@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { NavLink, BrowserRouter as Router, Route } from 'react-router-dom';
+import { NavLink, Router, Route } from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory'
 
 import { Panel, Container, LayoutWrapper } from 'substance-ui/lib/components/Layouts';
@@ -56,7 +56,7 @@ const Header = () => {
         <Container style={{ 'height' : '100%' }}>
           <Panel flex justifyContent="space-between" alignItems="center" alignment="center">
               <Heading type="h4">Substance UI</Heading>
-              <Menu itemColor="#313131" itemSpacing={30} activeFontSize={18} activeColor="black" activeWeight={800}>
+              <Menu itemColor="#313131" itemSpacing={30} activeFontSize={18} activeWeight={800}>
                 <MenuItem><NavLink exact to='/'>Getting Started</NavLink></MenuItem>
                 <MenuItem><NavLink exact to='/theme'>Theme</NavLink></MenuItem>
                 <MenuItem><NavLink exact to='/typography'>Typography</NavLink></MenuItem>
@@ -112,22 +112,25 @@ class AppHeader extends Component {
             <LayoutWrapper
               headerComponent={<Header />}
               headerHeight={100}
+              shrinkHeight={70}
               headerBg="#FFFFFF"
               headerShadow={true}
               contentBg="#F9F9F9"
             >
               <Container>
-                <Route exact path='/' component={Start} />
-                <Route path='/theme' component={Theme} />
-                <Route path='/typography' component={Typography} />
-                <Route path='/layout' component={Layout} />
-                <Route path='/grid' component={Grid} />
-                <Route path='/cards' component={Cards} />
-                <Route path='/charts' component={Charts} />
-                <Route path='/lists' component={Lists} />
-                <Route path='/tables' component={Tables} />
-                <Route path='/buttons' component={Buttons} />
-                <Route path='/form' component={Form} />
+                <Panel paddingBottom={80}>
+                  <Route exact path='/' component={Start} />
+                  <Route path='/theme' component={Theme} />
+                  <Route path='/typography' component={Typography} />
+                  <Route path='/layout' component={Layout} />
+                  <Route path='/grid' component={Grid} />
+                  <Route path='/cards' component={Cards} />
+                  <Route path='/charts' component={Charts} />
+                  <Route path='/lists' component={Lists} />
+                  <Route path='/tables' component={Tables} />
+                  <Route path='/buttons' component={Buttons} />
+                  <Route path='/form' component={Form} />
+                </Panel>
               </Container>
             </LayoutWrapper>
         </Router>
