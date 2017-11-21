@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { NavLink, Router, Route } from 'react-router-dom';
+import { NavLink, Router, Route, BrowserRouter } from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory'
 
 import { Panel, Container, LayoutWrapper } from 'substance-ui/lib/components/Layouts';
@@ -78,7 +78,7 @@ const Header = () => {
 class AppSidebar extends Component {
   render() {
     return (
-        <Router history={customHistory}>
+        <BrowserRouter history={customHistory} basename={process.env.PUBLIC_URL+'/'}>
             <LayoutWrapper
               sidebarComponent={<Sidebar />}
               sidebarWidth={260}
@@ -100,7 +100,7 @@ class AppSidebar extends Component {
                 <Route path='/form' component={Form} />
               </Container>
             </LayoutWrapper>
-        </Router>
+        </BrowserRouter>
     );
   }
 }
