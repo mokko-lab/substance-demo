@@ -1,21 +1,16 @@
 import React, {Component} from 'react';
 
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { ocean } from 'react-syntax-highlighter/dist/styles';
-
-import { theme } from 'substance-ui';
-import { Row, Column, Panel, Split, SplitColumn } from 'substance-ui/lib/components/Layouts';
-import { Heading, Paragraph } from 'substance-ui/lib/components/Typography';
-import { Card } from 'substance-ui/lib/components/Card';
+import { theme, Heading, Paragraph, Row, Column, Panel, Split, SplitColumn, Table, Card } from 'substance-ui';
 
 import Pallet from '../components/Pallet';
+import { propertiesHeader, propertiesRow } from '../components/PropertiesTable';
+import Highlighter from './../components/Highlighter';
 
 
 const codeBlock2 = `
   // App.js
   import React, {Component} from 'react';
-  import { makeTheme, ThemeProvider } from 'substance-ui/theme';
-
+  import { makeTheme, ThemeProvider } from 'substance-ui';
 
   const theme = {
     colors: {
@@ -61,19 +56,32 @@ const codeBlock2 = `
 
 class Theme extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      properties: [{
+        name: 'theme',
+        type: 'object',
+        options: '',
+        default: '',
+        description: 'Theme object contains default theme properties like colors, fonts and components styling options.'
+      }]
+    }
+  }
+
   render() {
     return (
       <div>
-        <Panel paddingTop={100} paddingBottom={40}>
+        <Panel paddingTop={80} paddingBottom={40}>
           <Heading type="h2" weight={800} margin={0}>Theme</Heading>
           <Paragraph size="medium" weight={300} margin="10px 0 0 0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             <br/>
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea co</Paragraph>
         </Panel>
-        <Row gutter={40}>
+        <Row gutter={50}>
           <Column>
-            <Panel paddingBottom={20}>
-              <Heading type="h4" weight={800} margin={0}>Colors</Heading>
+            <Panel paddingBottom={10}>
+              <Heading type="h4" weight={300}>Theme Colors</Heading>
             </Panel>
             <Split gutter={20} ratio={[2,2,1,1,1,1,1]}>
               <SplitColumn matchHeight>
@@ -128,13 +136,20 @@ class Theme extends Component {
             </Split>
           </Column>
           <Column>
-            <Panel paddingBottom={20}>
-              <Heading type="h4" weight={800} margin={0}>Theme Provider</Heading>
-              <Paragraph><code> { ` <ThemeProvider> ` } </code> is a wrapper component, This component provides a theme to all React components underneath itself via the context API. In the render tree all Substance UI components will have access to the provided theme. </Paragraph>
+            <Panel paddingBottom={10}>
+              <Heading type="h4" weight={300}>Theme Provider</Heading>
             </Panel>
-            <SyntaxHighlighter wrapLines={true} language='html, jsx, javascript' style={ocean}>
+              <Paragraph weight={300}><code> { ` <ThemeProvider> ` } </code> is a wrapper component, This component provides a theme to all React components underneath itself via the context API. In the render tree all Substance UI components will have access to the provided theme. </Paragraph>
+
+            <Highlighter block>
               {codeBlock2}
-            </SyntaxHighlighter>
+            </Highlighter>
+          </Column>
+          <Column>
+            <Panel paddingBottom={10}>
+              <Heading type="h4" weight={300}>Properties</Heading>
+            </Panel>
+            <Table dataSource={this.state.properties} headerComponent={propertiesHeader} rowComponent={propertiesRow} />
           </Column>
         </Row>
       </div>

@@ -2,12 +2,13 @@ import React, {Component} from 'react';
 import { NavLink, Route } from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory'
 
-import { Heading, Menu, MenuItem, Panel, Container, LayoutWrapper } from 'substance-ui';
+import { Heading, Menu, MenuItem, Panel, Container, LayoutWrapper, SubMenuItem } from 'substance-ui';
 
 import Home from './Home';
 import Start from './Start';
 import Theme from './Theme';
-import Typography from './Typography';
+import Headings from './Headings';
+import Paragraphs from './Paragraphs';
 import Layout from './Layout';
 import Grid from './Grid';
 import Cards from './Cards';
@@ -37,7 +38,8 @@ const Sidebar = () => {
           <Menu layout="vertical" itemColor="#313131" itemSpacing={25} activeFontSize={18} activeColor="black" activeWeight={800}>
             <MenuItem><NavLink exact to='/docs'>Getting Started</NavLink></MenuItem>
             <MenuItem><NavLink to='/docs/theme'>Theme</NavLink></MenuItem>
-            <MenuItem><NavLink to='/docs/typography'>Typography</NavLink></MenuItem>
+            <MenuItem><NavLink to='/docs/heading'>Heading</NavLink></MenuItem>
+            <MenuItem><NavLink to='/docs/paragraph'>Paragraph</NavLink></MenuItem>
             <MenuItem><NavLink exact to='/docs/layout'>Layout</NavLink></MenuItem>
             <MenuItem><NavLink exact to='/docs/grid'>Grid</NavLink></MenuItem>
             <MenuItem><NavLink to='/docs/charts'>Charts</NavLink></MenuItem>
@@ -63,17 +65,20 @@ class Docs extends Component {
               contentBg="#F9F9F9"
             >
               <Container left>
-                <Route exact path={`${this.props.match.path}`} component={Start} />
-                <Route path={`${this.props.match.path}/theme`} component={Theme} />
-                <Route path={`${this.props.match.path}/typography`} component={Typography} />
-                <Route path={`${this.props.match.path}/layout`} component={Layout} />
-                <Route path={`${this.props.match.path}/grid`} component={Grid} />
-                <Route path={`${this.props.match.path}/cards`} component={Cards} />
-                <Route path={`${this.props.match.path}/charts`} component={Charts} />
-                <Route path={`${this.props.match.path}/lists`} component={Lists} />
-                <Route path={`${this.props.match.path}/tables`} component={Tables} />
-                <Route path={`${this.props.match.path}/buttons`} component={Buttons} />
-                <Route path={`${this.props.match.path}/form`} component={Form} />
+                <Panel paddingBottom={80}>
+                  <Route exact path={`${this.props.match.path}`} component={Start} />
+                  <Route path={`${this.props.match.path}/theme`} component={Theme} />
+                  <Route path={`${this.props.match.path}/heading`} component={Headings} />
+                  <Route path={`${this.props.match.path}/paragraph`} component={Paragraphs} />
+                  <Route path={`${this.props.match.path}/layout`} component={Layout} />
+                  <Route path={`${this.props.match.path}/grid`} component={Grid} />
+                  <Route path={`${this.props.match.path}/cards`} component={Cards} />
+                  <Route path={`${this.props.match.path}/charts`} component={Charts} />
+                  <Route path={`${this.props.match.path}/lists`} component={Lists} />
+                  <Route path={`${this.props.match.path}/tables`} component={Tables} />
+                  <Route path={`${this.props.match.path}/buttons`} component={Buttons} />
+                  <Route path={`${this.props.match.path}/form`} component={Form} />
+                </Panel>
               </Container>
             </LayoutWrapper>
     );

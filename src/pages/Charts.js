@@ -179,7 +179,7 @@ class Charts extends Component {
                   <Panel paddingBottom={30}>
                     <Heading type="h5">Area Chart</Heading>
                   </Panel>
-                  <AreaChart height={270} animation={{
+                  <AreaChart animation={{
                     duration: 2000,
                     onLoad: {
                       duration: 1000
@@ -207,7 +207,7 @@ class Charts extends Component {
                 <Panel paddingBottom={30}>
                   <Heading type="h5">Bar Chart</Heading>
                 </Panel>
-                <BarChart height={270} animation={{
+                <BarChart animation={{
                   duration: 2000,
                   onLoad: {
                     duration: 1000

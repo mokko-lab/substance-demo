@@ -5,6 +5,8 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 import {ocean} from 'react-syntax-highlighter/dist/styles';
 import styled from 'styled-components';
 
+import FaGithub from 'react-icons/lib/fa/github';
+
 import {
   LayoutWrapper,
   Menu,
@@ -34,9 +36,14 @@ const Header = () => {
         <NavLink to='/'>
           <img src={require('./../images/icon.svg')} width="60" alt=""/>
         </NavLink>
-        <Menu itemSpacing={30} activeFontSize={18} activeWeight={800}>
+        <Menu itemSpacing={40} activeFontSize={18} activeWeight={800}>
           <MenuItem>
-            <NavLink to='/docs'>Docs</NavLink>
+            <NavLink to='/docs'>Documentation</NavLink>
+          </MenuItem>
+          <MenuItem>
+            <a href="https://github.com/mokko-lab/substance-ui" target="_blank">
+              <FaGithub />
+            </a>
           </MenuItem>
         </Menu>
       </Panel>
@@ -48,7 +55,7 @@ class Home extends Component {
 
   render() {
     return (
-      <LayoutWrapper headerComponent={< Header />} headerHeight={80} shrinkHeight={70} headerBg="#FFFFFF" headerShadow={true} contentBg="#F9F9F9">
+      <LayoutWrapper headerComponent={<Header />} headerHeight={80} shrinkHeight={70} headerBg="#FFFFFF" headerShadow={true} contentBg="#F9F9F9">
 
         <Container>
 

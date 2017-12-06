@@ -27,9 +27,13 @@ pre {
   padding: 3px;
 }
 
+span pre {
+  margin:0 !important;
+}
+
 p code {
   background: #e8e8e8;
-  padding: 2px 3px;
+  padding: 2px 0px;
   border-radius: 3px;
   color: black;
   display: inline-block;
