@@ -74,7 +74,7 @@ class Theme extends Component {
   render() {
     return (
       <div>
-        <Panel paddingTop={100} paddingBottom={40}>
+        <Panel paddingTop={100} paddingBottom={50}>
           <Heading type="h2" weight={800} margin={0}>Typography</Heading>
           <Paragraph size="medium" weight={300} margin="10px 0 0 0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             <br/>
@@ -83,8 +83,11 @@ class Theme extends Component {
 
         <Row gutter={40}>
           <Column>
-            <Row gutter={40} columnsCount={2}>
-              <Column matchHeight>
+            <Panel paddingBottom={20}>
+              <Heading type="h4" weight={800} margin={0}>Heading</Heading>
+            </Panel>
+            <Row gutter={20} columnsCount={1}>
+              <Column>
                 <Card>
                   <IconButton onClick={() => this.setState({ block1: true })}>
                     <MdCode size={24}/>
@@ -96,10 +99,8 @@ class Theme extends Component {
                     </SyntaxHighlighter>
                   </CodeBlock>
                   <Panel padding={30}>
-                    <Panel paddingBottom={30}>
-                      <Heading type="h5">Heading</Heading>
-                    </Panel>
                     <Panel childSpacing={20}>
+                      <Heading type="x-large">XLarge - Heading</Heading>
                       <Heading type="h1">H1 - Heading</Heading>
                       <Heading type="h2">H2 - Heading</Heading>
                       <Heading type="h3">H3 - Heading</Heading>
@@ -110,6 +111,29 @@ class Theme extends Component {
                   </Panel>
                 </Card>
               </Column>
+              <Column>
+                  <Heading type="h4" weight={300}>Usage</Heading>
+                  <span style={{'display': 'inline-block'}}>
+                    <SyntaxHighlighter useInlineStyles={true} language='babel' style={ocean}>
+                      {` <Heading type="x-large"> Heading </Heading> `}
+                    </SyntaxHighlighter>
+                  </span>
+              </Column>
+              <Column>
+                  <Heading type="h4" weight={300}>Properties</Heading>
+                  <span style={{'display': 'inline-block'}}>
+                    <SyntaxHighlighter useInlineStyles={true} language='babel' style={ocean}>
+                      {` <Heading type="x-large"> Heading </Heading> `}
+                    </SyntaxHighlighter>
+                  </span>
+              </Column>
+            </Row>
+          </Column>
+          <Column>
+            <Panel paddingBottom={20}>
+              <Heading type="h4" weight={800} margin={0}>Paragraph</Heading>
+            </Panel>
+            <Row gutter={40} columnsCount={1}>
               <Column matchHeight>
                 <Card>
                   <IconButton onClick={() => this.setState({ block2: true })}>
@@ -122,9 +146,6 @@ class Theme extends Component {
                     </SyntaxHighlighter>
                   </CodeBlock>
                   <Panel padding={30}>
-                    <Panel paddingBottom={30}>
-                      <Heading type="h5">Paragraph</Heading>
-                    </Panel>
                     <Panel childSpacing={20}>
                       <Paragraph size="large">Paragraph - large Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt laborum</Paragraph>
                       <Paragraph size="medium">Paragraph - medium Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt laborum</Paragraph>
@@ -133,9 +154,18 @@ class Theme extends Component {
                       <Paragraph size="x-small">Paragraph - x-small Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt laborum</Paragraph>
                       <code>A piece of computer code</code>
                     </Panel>
-
                   </Panel>
                 </Card>
+              </Column>
+              <Column matchHeight>
+                <Panel paddingTop={10} paddingBottom={30}>
+                  <Heading type="h4">Usage</Heading>
+                  <span style={{'display': 'inline-block'}}>
+                    <SyntaxHighlighter useInlineStyles={true} language='babel' style={ocean}>
+                      {` <Paragraph size="large"> Paragraph </Paragraph> `}
+                    </SyntaxHighlighter>
+                  </span>
+                </Panel>
               </Column>
             </Row>
           </Column>

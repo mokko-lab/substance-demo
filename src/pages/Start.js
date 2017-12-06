@@ -3,8 +3,7 @@ import React, {Component} from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { ocean } from 'react-syntax-highlighter/dist/styles';
 
-import { Panel } from 'substance-ui/lib/components/Layouts';
-import { Heading, Paragraph } from 'substance-ui/lib/components/Typography';
+import { Panel, Heading, Paragraph } from 'substance-ui';
 
 
 class Start extends Component {
